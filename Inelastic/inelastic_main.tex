@@ -43,6 +43,7 @@
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
+%\usepackage{multicol}
 %\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
@@ -106,7 +107,11 @@
 
 \input{results}
 
-\input{biblio.tex}
+%\input{biblio.tex}
 
+%\begin{multicols}{2}[]
+\bibliography{inelastic_main} 
+\bibliographystyle{plain}
+%\end{multicols}
 
 \end{document}
