@@ -114,23 +114,42 @@ uncertainty of 4\% has been applied to the expected background yield of each sub
 
 
 
-
-
-
-
-
-
-
-
 \subsection{Systematic Uncertainties}
 
-few words, mainly a table summarizing uncertainties. Figure~\ref{fig:unc}.
+Uncertainties on the total prediction of background events arise from the relative uncertainties on the measure of the normalization 
+factor $\tau_{bkg}$ and amount to 6\%, while uncertainties arising from radiogenic neutrons contributions are neglected. 
+Uncretainty on the shape of the predicted bakground distribution are assesed by reporting the maximal discrepancy in the ROI between
+the $^{60}$Co and $^{232}$Th calibration samples, according to this it is assigned to the expected yield of each subregion a 4\% uncertainty,
+uncertainty belonging to different regions are considered independent from each other.
+%It is important not only to describe correctly the expected total background but also its distribution
+
+Signal model, Energy scale uncertainties.... Uncertainties related to energy scale and more generally to detector response 
+are taken into account by relative uncertainties on the measure of $L_Y$,$\mathcal{L}_{eff}$,$Y$, $Q_Y$ and $\rho$. Has been shown 
+by the simulation that these type of uncertainty affect the total signal yield in the ROI by less than a percent for a wide range of masses,
+however they greatly affects the pdf of the signal model in the ROI. For each WIMP mass several signal simulation sample are produced 
+warying these parameter respectively $\pm 1 \sigma$, for each region is computed an uncertainty by adding in quadrature the variations
+%FIXME: explain this better, the up variation are separated from down variations and added togheter
+with respect to nominal of each case, Figure~\ref{fig:unc} is an example of such a systematic uncertainty computation for WIMP mass of 100~GeV.
+
+Uncertainty on the total yield of the signal arising from uncertainties on the selection acceptance are found to be very weakly dependent on 
+the WIMP mass, an overall 6\% acceptance uncertainty is then applied to all WIMP hypotesis.
+
+%FIXME: express this in an understandable way
+All the uncertainties discussed here are threated as nuissance parameter in the likelihood, which are contrained by a gaussian distribution.
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/wimp_sys_unc.png}
   \caption{Signal region, uncertainties for WIMP of mass 100~GeV.}
   \label{fig:unc}
 \end{figure}
+
+
+
+
+
+
+
+
 
 
 
