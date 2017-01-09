@@ -20,7 +20,7 @@
 %
 \documentclass[%
  reprint,
-%superscriptaddress,
+superscriptaddress,
 %groupedaddress,
 %unsortedaddress,
 %runinaddress,
@@ -39,7 +39,9 @@
 %prstper,
 %floatfix,
 ]{revtex4-1}
+%]{article}
 
+\usepackage{color}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
@@ -56,50 +58,130 @@
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
 
+%\usepackage[sorting=none]{biblatex}
+\usepackage{lineno}
+
+
+
+\newcommand{\assergi}{\affiliation{INFN, Laboratori Nazionali del Gran Sasso, Assergi, 67100, Italy}}
+\newcommand{\bologna}{\affiliation{University of Bologna and INFN-Bologna, Bologna, Italy}}
+\newcommand{\columbia}{\affiliation{Physics Department, Columbia University, New York, NY 10027, USA}}
+\newcommand{\coimbra}{\affiliation{Department of Physics, University of Coimbra, R. Larga, 3004-516, Coimbra, Portugal}}
+\newcommand{\heidelberg}{\affiliation{Max-Planck-Institut f\"ur Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany}}
+\newcommand{\houston}{\affiliation{Department of Physics and Astronomy, Rice University, Houston, TX 77005 - 1892, USA}}
+\newcommand{\laquila}{\affiliation{Department of Physics, University of L'Aquila, 67010, Italy}}
+\newcommand{\losangeles}{\affiliation{Physics \& Astronomy Department, University of California, Los Angeles, USA}}
+\newcommand{\mainz}{\affiliation{Institut f\"ur Physik, Johannes Gutenberg Universit\"at Mainz, 55099 Mainz, Germany}}
+\newcommand{\munster}{\affiliation{Institut f\"ur Kernphysik, Wilhelms-Universit\"at M\"unster, 48149 M\"unster, Germany}}
+\newcommand{\nikhef}{\affiliation{Nikhef  and the University of Amsterdam, Science park, Amsterdam, Netherlands}}
+\newcommand{\purdue}{\affiliation{Department of Physics, Purdue University, West Lafayette, IN 47907, USA}}
+\newcommand{\shanghai}{\affiliation{Department of Physics, Shanghai Jiao Tong University, Shanghai, 200240, China}}
+\newcommand{\subatech}{\affiliation{SUBATECH, Ecole des Mines de Nantes, CNRS/In2p3, Universit\'e de Nantes, 44307 Nantes, France}}
+\newcommand{\torino}{\affiliation{University of Torino and INFN-Torino, Torino, Italy}}
+\newcommand{\weizmann}{\affiliation{Department of Particle Physics and Astrophysics, Weizmann Institute of Science, 76100 Rehovot, Israel}}
+\newcommand{\zurich}{\affiliation{Physics Institute, University of Z\"{u}rich, Winterthurerstr. 190, CH-8057, Switzerland}}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
 
-%\preprint{APS/123-QED}
 
 \title{Search for WIMP Inelastic Scattering Off Xenon Nuclei With Xenon100 Data}% Force line breaks with \\
-\thanks{}%
 
-\author{Ann Author}
- \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
-\author{Second Author}%
- \email{Second.Author@institution.edu}
-\affiliation{%
- Authors' institution and/or address\\
- This line break forced with \textbackslash\textbackslash
-}%
 
-\collaboration{XENON Collaboration}%\noaffiliation
+\author{M.~Alfonsi}\nikhef
+\author{E.~Aprile}\columbia 
+\author{K.~Arisaka}\losangeles
+\author{F.~Arneodo}\assergi
+\author{C.~Balan}\coimbra
+\author{L.~Baudis}\zurich
+\author{A.~Behrens}\zurich
+\author{P.~Beltrame}\losangeles
+\author{K.~Bokeloh}\munster
+\author{E.~Brown}\munster
+\author{G.~Bruno}\assergi
+\author{R.~Budnik}\columbia 
+\author{J.~M.~R.~Cardoso}\coimbra
+\author{W.-T.~Chen}\subatech
+\author{B.~Choi}\columbia
+\author{H.~Contreras}\columbia
+\author{J.~P.~Cussonneau}\subatech
+\author{M.~P.~Decowski}\nikhef
+\author{E.~Duchovni}\weizmann
+\author{S.~Fattori}\mainz
+\author{A.~D.~Ferella}\zurich
+\author{W.~Fulgione}\torino
+\author{F.~Gao}\shanghai
+\author{M.~Garbini}\bologna
+\author{K.-L.~Giboni}\columbia
+\author{L.~W.~Goetzke}\columbia
+\author{C.~Grignon}\mainz
+\author{E.~Gross}\weizmann
+\author{W.~Hampel}\heidelberg
+\author{H.~Kettling}\munster
+\author{A.~Kish}\zurich
+\author{J.~Lamblin}\subatech
+\author{H.~Landsman}\weizmann
+\author{R.~F.~Lang}\purdue\columbia
+\author{M.~Le~Calloch}\subatech
+\author{C.~Levy}\munster
+\author{K.~E.~Lim}\columbia
+\author{Q.~Lin}\shanghai
+\author{S.~Lindemann}\heidelberg
+\author{M.~Lindner}\heidelberg
+\author{J.~A.~M.~Lopes}\coimbra
+\author{K.~Lung}\losangeles
+\author{T.~Marrod\'an~Undagoitia} \email{marrodan@physik.uzh.ch} \zurich%[Email:]
+\author{F.~V.~Massoli}\bologna
+\author{Y.~Mei}\houston\mainz
+\author{A.~J.~Melgarejo~Fernandez}\columbia
+\author{Y.~Meng}\losangeles
+\author{A.~Molinario}\torino
+\author{E.~Nativ}\weizmann
+\author{K.~Ni}\shanghai
+\author{U.~Oberlack}\houston\mainz
+\author{S.~E.~A.~Orrigo}\coimbra
+\author{E.~Pantic} \email{pantic@physics.ucla.edu} \losangeles
+\author{D.~P\"atzold}\mainz
+\author{R.~Persiani}\bologna
+\author{G.~Plante}\columbia
+\author{N.~Priel}\weizmann
+\author{A.~C.~C.~Ribeiro}\coimbra
+\author{A.~Rizzo}\columbia
+\author{S.~Rosendahl}\munster
+\author{J.~M.~F.~dos Santos}\coimbra
+\author{G.~Sartorelli}\bologna
+\author{J.~Schreiner}\heidelberg
+\author{M.~Schumann}\zurich
+\author{L.~Scotto~Lavina}\subatech
+\author{P.~R.~Scovell}\losangeles
+\author{M.~Selvi}\bologna
+\author{P.~Shagin}\houston
+\author{H.~Simgen}\heidelberg
+\author{A.~Teymourian}\losangeles
+\author{D.~Thers}\subatech
+\author{O.~Vitells}\weizmann
+\author{H.~Wang}\losangeles
+\author{M.~Weber}\heidelberg
+\author{C.~Weinheimer}\munster
 
-\author{Authors}
-% \homepage{http://www.Second.institution.edu/~Charlie.Author}
-\affiliation{
- Second institution and/or address\\
- This line break forced% with \\
-}%
-\affiliation{
- Affiliation
-}%
+\collaboration{The XENON100 Collaboration}\noaffiliation
 
-%\collaboration{CLEO Collaboration}%\noaffiliation
 
-\date{\today}% It is always \today, today,
-             %  but any date may be explicitly specified
+
+\date{\today}
 
 \begin{abstract}
-
+	Some nice abstract here.....
 \end{abstract}
 
-%\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
-                             % Classification Scheme.
 %\keywords{Suggested keywords}%Use showkeys class option if keyword
                               %display desired
 \maketitle
 
 %\tableofcontents
+
+\linenumbers
 
 \input{intro}
 
@@ -109,9 +191,7 @@
 
 %\input{biblio.tex}
 
-%\begin{multicols}{2}[]
 \bibliography{inelastic_main} 
-\bibliographystyle{plain}
-%\end{multicols}
-
+\bibliographystyle{unsrt}
+%\printbibliography
 \end{document}
