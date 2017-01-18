@@ -1,18 +1,22 @@
 \section{Data Analysis}
 \label{sec:analysis}
 
-This analysis is performed using XENON100 Run-II science data, which corresponds to an exposure of 224.6~live days. The detector response to
-electronic recoil (ER) has been characterized using $^{60}$Co and $^{232}$Th radioactive sources, while response to inelastic nuclear recoil (NR)
-scattering was calibrated using an $^{241}$AmBe source. 
+This analysis is performed using XENON100 run\,II science data, which corresponds to a data set with an exposure of 224.6~live days. The detector response to
+ERs has been characterised with $^{60}$Co and $^{232}$Th calibration sources, while the response to NRs was calibrated with an $^{241}$AmBe $(\alpha,n)$-source. This fast neutron source gives rise to elastic and inelastic neutron-nucleus scatters, and can thus be employed to define the expected signal region.
 
-The inelastic scattering of a WIMP with the nucleus of $^{129}$Xe produces an energy deposit via nuclear recoil with subsequent emission of  
-a 39.6~keV de-excitation photon. 
-The largest fraction of the energy released in the event is via electronic recoil due to the emitted photon, this represents an
-unusual signature for this kind of detector and brings the possible signal to overlay a phase space region with large backgrounds.
-The chosen region of interest (ROI) for this analysis surrounds the 39.6~keV xenon line in the cS1-cS2 plane and is further divided into
-sub-regions, as shown in Figure~\ref{fig:SR} and~\ref{fig:SR2}.
+\subsection{Signal Correction} 
 
-Events are asked, other than falling in the defined region of interest, to fulfill several selection criteria which can be summarized as:
+A particle interaction in the liquid xenon produces an S1 and a correlated S2 signal with a certain number of photoelectrons (PE) observed by the PMTs. The non-uniform scintillation light collection by the PMT arrays, due to solid angle effects, Rayleigh scattering length, reflectivity, transmission of the electrodes, etc, lead to a position-dependent S1 signal. The warping of the top meshes (inducing a variation in the width of the gas gap between the anode and the liquid-gas interface), the absorption of electrons by residual impurities, as they drift towards the gas region, as well as solid angle effects lead to a position-dependent S2 signal. These signals are thus corrected in 3 dimensions, using various calibration data~\cite{Aprile:2011dd}, with the corrected quantities denoted as cS1 and cS2.
+
+\subsection{Signal Region} 
+
+As explained in Section~\ref{sec:intro}, the inelastic scattering of a WIMP with a $^{129}$Xe nucleus produces an energy deposit via a NR with subsequent emission of  
+a 39.6\,keV de-excitation photon. The largest fraction of the energy released in the event is via an ER, due to the emitted photon which loses its energy in the LXe.
+This represents an unusual signature compared to the one expected from an elastic scatter, and brings the signal region to overlap with the ER background region.
+The selected region of interest (ROI) for this analysis surrounds the 39.6\,keV xenon line in the cS1-cS2 plane and is further divided into
+sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}.
+
+Other than falling in the defined region of interest, events are required to fulfil several selection criteria, which can be summarised as follows:
 selection aimed to reduce noise impact and including energy (S1) and S2 thresholds, veto of events with energy release in the detector's outer volume, 
 and additionally, events must be of single scatter nature and fall into a predefined fiducial volume. This analysis follows the 
 selection criteria described in detail in \cite{dataAnalysis} for Run-II, with only few exceptions reported in what follows. 
@@ -33,6 +37,7 @@ Finally the chosen fiducial volume corresponds to 34~Kg of liquid xenon.
 
 \subsection{Signal Simulation} 
 %description of the simulated signal, few words about cross checks MC matching.
+
 The detector response to inelastic scattering of WIMPs  off $^{129}$Xe nucleus was simulated using an empirical model.
 The total deposited energy is divided into two independent contributions: one related to the 39.6~keV de-excitation photon and the other  relative to
 the simultaneous nuclear recoil of the xenon atom. The number of photons and charge yield detected is simulated separately for each contribution
