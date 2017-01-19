@@ -6,7 +6,7 @@ ERs has been characterised with $^{60}$Co and $^{232}$Th calibration sources, wh
 
 \subsection{Signal Correction} 
 
-A particle interaction in the liquid xenon produces an S1 and a correlated S2 signal with a certain number of photoelectrons (PE) observed by the PMTs. The non-uniform scintillation light collection by the PMT arrays, due to solid angle effects, Rayleigh scattering length, reflectivity, transmission of the electrodes, etc, lead to a position-dependent S1 signal. The warping of the top meshes (inducing a variation in the width of the gas gap between the anode and the liquid-gas interface), the absorption of electrons by residual impurities as they drift towards the gas region, as well as solid angle effects lead to a position-dependent S2 signal. These signals are thus corrected in 3 dimensions, using various calibration data, as detailed in~\cite{Aprile:2011dd,Aprile:2012vw}, with the corrected quantities denoted as cS1 and cS2, and defined in~\cite{Aprile:2012vw}. The trigger efficiency in thus run was 100\% for S2$>$300\,PE.
+A particle interaction in the liquid xenon produces an S1 and a correlated S2 signal with a certain number of photoelectrons (PE) observed by the PMTs. The non-uniform scintillation light collection by the PMT arrays, due to solid angle effects, Rayleigh scattering length, reflectivity, transmission of the electrodes, etc, lead to a position-dependent S1 signal. The warping of the top meshes (inducing a variation in the width of the gas gap between the anode and the liquid-gas interface), the absorption of electrons by residual impurities as they drift towards the gas region, as well as solid angle effects lead to a position-dependent S2 signal. These signals are thus corrected in 3 dimensions, using various calibration data, as detailed in~\cite{Aprile:2011dd,Aprile:2012vw}, with the corrected quantities denoted as cS1 and cS2, and defined in~\cite{Aprile:2012vw}. The trigger efficiency in this run was 100\% for S2$>$300\,PE.
 
 \subsection{Signal Region and Event Selection} 
 
@@ -14,14 +14,14 @@ As explained in Section~\ref{sec:intro}, the inelastic scattering of a WIMP with
 a 39.6\,keV de-excitation photon. The largest fraction of the energy released in the event is via an ER, due to the emitted photon which loses its energy in the LXe.
 This represents an unusual signature compared to the one expected from an elastic scatter, and brings the signal region to overlap with the ER background region.
 The selected region of interest (ROI) for this analysis surrounds the 39.6\,keV xenon line in the cS1-cS2 plane and is further divided into
-sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}.
+sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}. {\textcolor{red} {Here more info on these regions, and the cS1 and cS2 boundaries?}
 
 Apart from the condition to occur in the defined region of interest in the cS2-cS1-plane, valid events are required to fulfil several selection criteria, 
-which can be summarised as follows: data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detectors active LXe shield, 
-selection of single scatter events and of a predefined fiducial volume. 
+which can be summarised as follows: basic data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detector's active LXe shield, 
+selection of single-scatter events and of a predefined fiducial volume. 
 
-This analysis follows the selection criteria described in detail in \cite{Aprile:2012vw} for Run-II, with only a few exceptions reported in what follows. 
-The cut on the S2 signal width as a function of drift time (where the maximal drift time is 176\,$\mu$s and the width values range from $\sim$1-2\,$\mu$s) has been optimised on a sample of events selected from the 39.6\,keV line and set to a 95\% acceptance on these. Events are required to be single-scatters by applying a threshold cut on the size of the 
+This analysis closely follows the event selection criteria described in detail in \cite{Aprile:2012vw} for Run-II, with only a few exceptions reported in what follows. 
+The cut on the width of the S2 signal as a function of drift time (where the maximal drift time is 176\,$\mu$s and the width values range from $\sim$1-2\,$\mu$s) has been optimised on a sample of events selected from the 39.6\,keV line and set to a 95\% acceptance on these. This cut ensures that the S2-signal width is consistent with the $z$-position calculated from the observed time difference between the S1 and S1 signals. Events are required to be single-scatters by applying a threshold cut on the size of the 
 second largest S2 peak. For this analysis, the threshold has been optimised to 160\,PE and set constant as function of S2 signal size. 
 Finally, the chosen fiducial volume corresponds to 34\,kg of liquid xenon.
 
@@ -100,21 +100,20 @@ were simulated. The simulated events were in agreement  with calibration data wi
 
 \subsection {Background Model}
 
-The main expected background contribution in the region of interest is due to eviromental and material radioactivity, its composition is mainly
-represented by Compton scattering photons. Background contribution due to the activation of the xenon 39.6~keV line from radiogenic neutrons is expected to be negligible.
+The background in the region of interest for inelastic scattering is dominated by ERs due the residual radioactivity of detector materials, due to $^{85}$Kr present in the liquid xenon ($\sim$55\%) as well as due to $^{222}$Rn decays in the liquid ($<$7\%)~\cite{Aprile:2011vb}. The background contribution from inelastic scatters of radiogenic or cosmogenic neutrons (producing a 39.6\,keV de-excitation line) is negligible thanks to the very low expected neutron scattering rate in the detector~\cite{Aprile:2013tov}.
 
-The background is modeled using data from the $^{60}$Co calibration campaign, which are assumed to well represent the background density distribution 
-in the cS1-cS2 plane. 
-The calibration sample yields  about 22'000 events in the ROI, these are then scaled to data according to a measured scale factor $\tau_{bkg}$.
-This scale factor, which is merely the ratio between the data and calibration sample yields, is measured in the two control regions shown in Figure~\ref{fig:SR} and labelled CR1 and CR2. The two control 
+
+The expected background is modelled using data from the $^{60}$Co calibration campaign, which are assumed to well represent the background density distribution 
+in the cS1-cS2 plane. The calibration sample yields  about $2.2\times10^4$ events in the ROI; these are then scaled to the science data according to a measured scale 
+factor $\tau_{bkg}$. This scale factor, which is merely the ratio between the data and calibration sample yields, is measured in the two control regions shown in Figure~\ref{fig:SR} and labelled CR1 and CR2. The two control 
 regions give compatible results and the computed average is $\tau_{bkg} \, =  \, 0.034 \pm 0.002 $, where the reported uncertainty 
 is of statistical nature only.
 
 The distribution of the calibration sample has been compared to the data of the science run in the two control regions,
-agreement is found within statistical uncertainties. Furthermore, $^{60}$Co calibration data have been compared in the region of interest to  
-data from $^{232}$Th calibration campaign, the largest deviation between the two shapes is within 4\%. An additional systematic
-uncertainty of 4\% has been applied to the expected background yield of each sub-region of the ROI.
-
+and agreement was found within statistical uncertainties. Furthermore, $^{60}$Co calibration data have been compared in the region of interest to  
+data from the $^{232}$Th calibration campaign, and the largest deviation between the two shapes is within 4\%. An additional systematic
+uncertainty of 4\% has thus been applied to the expected background yield of each sub-region of the ROI.
+{\textcolor{red} {Should we show a figure, namely the agreement of data and BG model for the control regions? Like the second figure in the background model check note.}}
 
 
 
@@ -123,34 +122,35 @@ uncertainty of 4\% has been applied to the expected background yield of each sub
 %FIXME: maybe change region definitions in order to have the sub-region 9 labelled as 7, so the signal would "nicely" look like a bump.
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/wimp_sys_unc.png}
-  \caption{Signal region, uncertainties for WIMP of mass 100~GeV.}
+  \caption{Predicted signal (blue curve), along with statistical and systematic uncertainties (cyan region) simulated for a WIMP mass of 100\,GeV/c$^2$. The signal and its uncertainties are shown as a function of the signal region number {\textcolor{red} {Maybe there is a better way to say this, or leave out?}}. The signal has been scaled for a total number of 50 events. }
   \label{fig:unc}
 \end{figure}
 
 
-Uncertainties on the total prediction of background events arise from the uncertainty on the measure of the normalization 
-factor, $\tau_{bkg}$, and amount to 6\%, contribution of radiogenic neutrons are neglected. 
-Systematic uncertainty on the shape of the predicted background distribution are assessed by the maximal discrepancy in the ROI between
-the $^{60}$Co and $^{232}$Th calibration samples, a 4\% systematic additional to statistical uncertainty is assigned to the expected yield of each sub-region.
-Note that uncertainties belonging to different sub-regions are considered independent from each other.
+Uncertainties on the  prediction of the total number of background events arise from the uncertainty on the measurement of the normalisation 
+factor, $\tau_{bkg}$, and amount to 6\%. % contribution of radiogenic neutrons are neglected. 
+Systematic uncertainty on the shape of the predicted background distribution are assessed by the maximal observed discrepancy in the ROI between
+the $^{60}$Co and $^{232}$Th calibration samples.  As explained, a 4\% systematic uncertainty is added  to the expected yield of each sub-region.
+Uncertainties belonging to different sub-regions in the ROI are considered independent from one another.
 %It is important not only to describe correctly the expected total background but also its distribution
 
-Uncertainty on the total yield of signal arising from selections acceptance uncertainties are found to be very weakly dependent on 
-the WIMP mass, an overall 6\% acceptance uncertainty is then applied to all WIMPs hypothesis. 
+Uncertainties on the total yield of signal events arising from selections acceptance uncertainties are found to be very weakly dependent on 
+the WIMP mass, and an overall 6\% acceptance uncertainty is applied to all WIMP hypotheses. 
 
-Uncertainties on the energy scale and, more generally, related to detector response 
-are parameterized using the respective uncertainties on the measure of $L_y$, $\mathcal{L}_{eff}$, $Y$, $Q_Y$ and $\rho$. The simulation shows 
-that these type of uncertainties mainly affect the pdf of the signal model in the ROI, and very weakly the total signal yield. 
+Uncertainties on the energy scale and, more generally, related to detector responses  are parameterised 
+using the respective uncertainties on the measures of $L_y$, $\mathcal{L}_{eff}$, $Y$, $Q_Y$ and $\rho$. The simulation shows 
+that these uncertainties mainly affect the pdf of the signal model in the ROI, and very weakly the total signal yield. 
 %For each WIMP mass we simulate several signal pseudo-sample, which are produced varying the model parameters  respectively of $\pm 1$ standard deviation. 
-They are taken into account by simulating several signal pseudo-sample for each WIMP mass, the pseudo-samples are produced varying the model parameters respectively of $\pm 1$ standard deviation. 
-For each sub-region is then computed an overall uncertainty by adding in quadrature the variations of each pseudo-sample 
+They are taken into account by simulating several signal pseudo-samples for each WIMP mass, where the pseudo-samples are produced 
+by varying the model parameters within their $\pm 1$ standard deviations. 
+For each sub-region an overall uncertainty is then computed, by adding in quadrature the variations of each pseudo-sample 
 %FIXME: explain this better, the up variation are separated from down variations and added together
-with respect to nominal. Figure~\ref{fig:unc} is an example of such a systematic uncertainty computation for a WIMP of 100~GeV mass.
+with respect to nominal. Figure~\ref{fig:unc} shows an example of such a systematic uncertainty computation for a WIMP mass of 100\,GeV/c$^2$.
 
 
 %FIXME: express this in an understandable way
-All the uncertainties discussed here are parameterized within a binned profiled likelihood function using the framework~\cite{roostat,roofit}.
-All parameters related to systematic uncertainties are assumed to be normally distributed.
+All the uncertainties discussed here are parameterised with a binned profile likelihood function using the framework from~\cite{roostat,roofit}.
+All the parameters related to systematic uncertainties are assumed to be normally distributed.
 
 
 
