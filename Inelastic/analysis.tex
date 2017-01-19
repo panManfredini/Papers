@@ -14,7 +14,7 @@ As explained in Section~\ref{sec:intro}, the inelastic scattering of a WIMP with
 a 39.6\,keV de-excitation photon. The largest fraction of the energy released in the event is via an ER, due to the emitted photon which loses its energy in the LXe.
 This represents an unusual signature compared to the one expected from an elastic scatter, and brings the signal region to overlap with the ER background region.
 The selected region of interest (ROI) for this analysis surrounds the 39.6\,keV xenon line in the cS1-cS2 plane and is further divided into
-sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}. {\textcolor{red} {Here more info on these regions, and the cS1 and cS2 boundaries?}
+sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}.  These sub-regions were defined such as to contain roughly a similar number of expected background events in each region. The control regions CR1 and CR2 are chosen to be as close as possible to the signal regions,  and are used as cross check of the background shape distribution.
 
 Apart from the condition to occur in the defined region of interest in the cS2-cS1-plane, valid events are required to fulfil several selection criteria, 
 which can be summarised as follows: basic data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detector's active LXe shield, 
@@ -28,7 +28,7 @@ Finally, the chosen fiducial volume corresponds to 34\,kg of liquid xenon.
 
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/bkg_in_sr.png}
-  \caption{Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the cS2 versus cS1 plane. {\textcolor{red} {I think we must explains the shape of these regions.}}}
+  \caption{Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the cS2 versus cS1 plane. Their definition is given in the text.}
   \label{fig:SR}
 \end{figure}
 
@@ -42,17 +42,17 @@ the simultaneous nuclear recoil of the xenon atom. The detected light (S1) and c
 and then added together. This is due to the fact that the light and charge yields depend on the type of interaction (ER vs. NR), and on the deposited energy.
 
 
-The distribution of an ER induced by the de-excitation photon in the cS1-cS2 plane  is simulated assuming a two dimensional normal probability distribution function (pdf), $f(cS1,cS2)$, 
+The distribution of an ER induced by the de-excitation photon in the cS1-cS2 plane  is simulated assuming a two dimensional normal probability distribution function (pdf), $f(cS1_{er},cS2_{er})$, 
 described (apart from a constant normalisation factor) by the following equation:
 
 \begin{multline}
-	f(cS1,cS2)  = {\rm exp} \Big\{ -\frac{1}{2(1-\rho^2)} \Big[ \frac{(cS1 - \mu_{cS1})^2}{\sigma_{cs1}^2} + \\ 
-	 \frac{(cS2 - \mu_{cS2})^2}{\sigma_{cs2}^2} - \frac{2\rho\cdot(cS1 - \mu_{cs1}) (cS2 - \mu_{cs2})} {\sigma_{cs1}\sigma_{cs2}} \Big] \Big\}
+	f(cS1_{er},cS2_{er})  = {\rm exp} \Big\{ -\frac{1}{2(1-\rho^2)} \Big[ \frac{(cS1_{er} - \mu_{cS1_{er}})^2}{\sigma_{cs1}^2} + \\ 
+	 \frac{(cS2_{er} - \mu_{cS2_{er}})^2}{\sigma_{cs2}^2} - \frac{2\rho\cdot(cS1_{er} - \mu_{cs1}) (cS2_{er} - \mu_{cs2})} {\sigma_{cs1}\sigma_{cs2}} \Big] \Big\}
 	%f(cS1,cS2) ~ = ~  \frac{1}{2 \pi \sigma_{cs1} \sigma_cs2 \sqrt{1-\rho^{2}} } exp \Big( -\frac{1}{2(1-\rho^2)} \Big[ \frac{(cS1 - \hat{cS1})^2}{\sigma_{cs1}^2} \Big] \Big)
 \label{f:2dgaus}
 \end{multline}
 where $\mu_{cS1}$ and $\mu_{cS2}$ 
-represent the average observed cS1 and cS2 signals given a 39.6\,keV ER, $\sigma_{cs1}$ and $\sigma_{cs2}$ are the standard deviation in cS1 and cS2 respectively,
+represent the average observed $cS1_{er}$ and $cS2_{er}$ signals given a 39.6\,keV ER, $\sigma_{cs1}$ and $\sigma_{cs2}$ are the standard deviation in $cS1_{er}$ and $cS2_{er}$ respectively,
 while $\rho$ stands for the correlation between the cS1 and cS2 signals. The detector-related light yield $L_y$  at 39.6\,keV, necessary to evaluate the average number of prompt photons detected 
 ($\mu_{cS1}$), is obtained from the NEST model~\cite{NEST,Geant1,Geant2} fit to data collected with several $\gamma$-lines.  The average light yield at 39.6\,keV is 2.7\,PE/keV.
 
