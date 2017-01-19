@@ -1,14 +1,14 @@
 \section{Data Analysis}
 \label{sec:analysis}
 
-This analysis is performed using XENON100 run\,II science data, which corresponds to a data set with an exposure of 224.6~live days. The detector response to
-ERs has been characterised with $^{60}$Co and $^{232}$Th calibration sources, while the response to NRs was calibrated with an $^{241}$AmBe $(\alpha,n)$-source. This fast neutron source gives rise to elastic and inelastic neutron-nucleus scatters, and can thus be employed to define the expected signal region.
+This analysis is performed using XENON100 Run-II science data, which corresponds to a data set with an exposure of 224.6~live days. The detector response to
+ERs has been characterised with $^{60}$Co and $^{232}$Th calibration sources, while the response to NRs was calibrated with an $^{241}$AmBe $(\alpha,n)$-source. This fast neutron source gives rise to elastic and inelastic neutron-nucleus scatters, and can thus be employed to define the expected signal region for inelastic WIMP-nucleus scatters.
 
 \subsection{Signal Correction} 
 
-A particle interaction in the liquid xenon produces an S1 and a correlated S2 signal with a certain number of photoelectrons (PE) observed by the PMTs. The non-uniform scintillation light collection by the PMT arrays, due to solid angle effects, Rayleigh scattering length, reflectivity, transmission of the electrodes, etc, lead to a position-dependent S1 signal. The warping of the top meshes (inducing a variation in the width of the gas gap between the anode and the liquid-gas interface), the absorption of electrons by residual impurities, as they drift towards the gas region, as well as solid angle effects lead to a position-dependent S2 signal. These signals are thus corrected in 3 dimensions, using various calibration data~\cite{Aprile:2011dd}, with the corrected quantities denoted as cS1 and cS2.
+A particle interaction in the liquid xenon produces an S1 and a correlated S2 signal with a certain number of photoelectrons (PE) observed by the PMTs. The non-uniform scintillation light collection by the PMT arrays, due to solid angle effects, Rayleigh scattering length, reflectivity, transmission of the electrodes, etc, lead to a position-dependent S1 signal. The warping of the top meshes (inducing a variation in the width of the gas gap between the anode and the liquid-gas interface), the absorption of electrons by residual impurities as they drift towards the gas region, as well as solid angle effects lead to a position-dependent S2 signal. These signals are thus corrected in 3 dimensions, using various calibration data, as detailed in~\cite{Aprile:2011dd,Aprile:2012vw}, with the corrected quantities denoted as cS1 and cS2, and defined in~\cite{Aprile:2012vw}. The trigger efficiency in thus run was 100\% for S2$>$300\,PE.
 
-\subsection{Signal Region} 
+\subsection{Signal Region and Event Selection} 
 
 As explained in Section~\ref{sec:intro}, the inelastic scattering of a WIMP with a $^{129}$Xe nucleus produces an energy deposit via a NR with subsequent emission of  
 a 39.6\,keV de-excitation photon. The largest fraction of the energy released in the event is via an ER, due to the emitted photon which loses its energy in the LXe.
@@ -16,62 +16,59 @@ This represents an unusual signature compared to the one expected from an elasti
 The selected region of interest (ROI) for this analysis surrounds the 39.6\,keV xenon line in the cS1-cS2 plane and is further divided into
 sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}.
 
-Other than falling in the defined region of interest, events are required to fulfil several selection criteria, which can be summarised as follows:
-selection aimed to reduce noise impact and including energy (S1) and S2 thresholds, veto of events with energy release in the detector's outer volume, 
-and additionally, events must be of single scatter nature and fall into a predefined fiducial volume. This analysis follows the 
-selection criteria described in detail in \cite{dataAnalysis} for Run-II, with only few exceptions reported in what follows. 
-%only few modification have been designed specifically for this analysis and discussed below. 
-The selection on S2 width as a function of drift time has been optimized on a sample of events selected from the 39.6~keV line
-and set to a 95\% acceptance on these. Events are required to be single scatter by applying a threshold on the 
-second largest S2 peak size,  for this analysis this threshold has been optimized to 160~PE and set constant as function of S2 signal size. 
-Finally the chosen fiducial volume corresponds to 34~Kg of liquid xenon.
+Apart from the condition to occur in the defined region of interest in the cS2-cS1-plane, valid events are required to fulfil several selection criteria, 
+which can be summarised as follows: data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detectors active LXe shield, 
+selection of single scatter events and of a predefined fiducial volume. 
+
+This analysis follows the selection criteria described in detail in \cite{Aprile:2012vw} for Run-II, with only a few exceptions reported in what follows. 
+The cut on the S2 signal width as a function of drift time (where the maximal drift time is 176\,$\mu$s and the width values range from $\sim$1-2\,$\mu$s) has been optimised on a sample of events selected from the 39.6\,keV line and set to a 95\% acceptance on these. Events are required to be single-scatters by applying a threshold cut on the size of the 
+second largest S2 peak. For this analysis, the threshold has been optimised to 160\,PE and set constant as function of S2 signal size. 
+Finally, the chosen fiducial volume corresponds to 34\,kg of liquid xenon.
 
 
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/bkg_in_sr.png}
-  \caption{Signal region and control region.}
+  \caption{Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the cS2 versus cS1 plane. {\textcolor{red} {I think we must explains the shape of these regions.}}}
   \label{fig:SR}
 \end{figure}
 
 
 
 \subsection{Signal Simulation} 
-%description of the simulated signal, few words about cross checks MC matching.
 
-The detector response to inelastic scattering of WIMPs  off $^{129}$Xe nucleus was simulated using an empirical model.
-The total deposited energy is divided into two independent contributions: one related to the 39.6~keV de-excitation photon and the other  relative to
-the simultaneous nuclear recoil of the xenon atom. The number of photons and charge yield detected is simulated separately for each contribution
-and then added together.
+The detector response to inelastic WIMP-$^{129}$Xe interactions was simulated using an empirical signal model.
+The total deposited energy is divided into two independent contributions: one coming from the 39.6\,keV de-excitation photon and the other  from  
+the simultaneous nuclear recoil of the xenon atom. The detected light (S1) and charge (S2) signals are simulated separately for each of the two contributions 
+and then added together. This is due to the fact that the light and charge yields depend on the type of interaction (ER vs. NR), and on the deposited energy.
 
-The distribution in the cS1-cS2 plane of an ER induced by the de-excitation photon is simulated assuming a two dimensional normal pdf, $f(cS1,cS2)$, 
-described except a normalization factor in equation~\ref{f:2dgaus}:
+
+The distribution of an ER induced by the de-excitation photon in the cS1-cS2 plane  is simulated assuming a two dimensional normal probability distribution function (pdf), $f(cS1,cS2)$, 
+described (apart from a constant normalisation factor) by the following equation:
+
 \begin{multline}
-	f(cS1,cS2)  = exp \Big( -\frac{1}{2(1-\rho^2)} \Big[ \frac{(cS1 - \mu_{cS1})^2}{\sigma_{cs1}^2} + \\ 
-	 \frac{(cS2 - \mu_{cS2})^2}{\sigma_{cs2}^2} - \frac{2\rho(cS1 - \mu_{cs1}) (cS2 - \mu_{cs2})} {\sigma_{cs1}\sigma_{cs2}} \Big] \Big) 
+	f(cS1,cS2)  = {\rm exp} \Big\{ -\frac{1}{2(1-\rho^2)} \Big[ \frac{(cS1 - \mu_{cS1})^2}{\sigma_{cs1}^2} + \\ 
+	 \frac{(cS2 - \mu_{cS2})^2}{\sigma_{cs2}^2} - \frac{2\rho\cdot(cS1 - \mu_{cs1}) (cS2 - \mu_{cs2})} {\sigma_{cs1}\sigma_{cs2}} \Big] \Big\}
 	%f(cS1,cS2) ~ = ~  \frac{1}{2 \pi \sigma_{cs1} \sigma_cs2 \sqrt{1-\rho^{2}} } exp \Big( -\frac{1}{2(1-\rho^2)} \Big[ \frac{(cS1 - \hat{cS1})^2}{\sigma_{cs1}^2} \Big] \Big)
 \label{f:2dgaus}
 \end{multline}
 where $\mu_{cS1}$ and $\mu_{cS2}$ 
-represents the average observed cS1 and cS2 given a 39.6~keVee , $\sigma_{cs1}$ and $\sigma_{cs2}$ are the standard deviation in cS1 and cS2 respectively,
-while $\rho$ stands for the correlation between cS1 and cS2.
-The detector related light yield $L_y$  at 39.6~keV, necessary to evaluate the average number of photon detected ($\mu_{cS1}$),
-%with AmBe calibration has been found to have a large systematic uncertainty
-%due to the contribution of the nuclear recoil, so the light yield used to describe the number of photon detected 
-is obtained as the result of a NEST model~\cite{NEST,Geant1,Geant2} fit to data collected with several lines.  The same model is used to predict the charge yield at
-39.6~keV which is then scaled according to the detector's secondary scintillation gain $Y$, determined from detector response to single electrons~\cite{SingleE}.
-The detector resolution at 39.6~keV in cS1 and cS2 has been measured to be respectively 15.8\% and 14.7\% and used to extract the standard 
-deviations $\sigma_{cs1}$, $\sigma_{cs2}$.  The correlation parameter is assumed to be independent of energy (at least in the considered range) and measured
-using the 164~keV xenon activated line by $^{124}$AmBe calibration data, this line is chosen since allows to disentangle efficiently contribution from nuclear recoil.
-The measured correlation is $\rho \, = \, -0.45 \pm 0.10$. 
+represent the average observed cS1 and cS2 signals given a 39.6\,keV ER, $\sigma_{cs1}$ and $\sigma_{cs2}$ are the standard deviation in cS1 and cS2 respectively,
+while $\rho$ stands for the correlation between the cS1 and cS2 signals. The detector-related light yield $L_y$  at 39.6\,keV, necessary to evaluate the average number of prompt photons detected 
+($\mu_{cS1}$), is obtained from the NEST model~\cite{NEST,Geant1,Geant2} fit to data collected with several $\gamma$-lines.  The average light yield at 39.6\,keV is 2.7\,PE/keV.
+
+The same model is used to predict the charge yield at 39.6\,keV, which is afterwards scaled according to the detector's secondary scintillation gain $Y$. 
+ The latter is determined from detector's response to single electrons~\cite{SingleE}.
+The energy resolution at 39.6\,keV in cS1 and cS2 has been measured to be 15.8\% and 14.7\%, respectively, and is used to extract the standard 
+deviations $\sigma_{cs1}$, $\sigma_{cs2}$.  The correlation parameter is assumed to be independent of energy (at least in the considered narrow energy range) and measured
+using the 164\,keV line from the decay of the $^{131m}$Xe isomer ($T_{1/2}$=11.8\,d) produced during the  $^{124}$AmBe run. This $\gamma$-line is chosen because it allows to disentangle efficiently the contribution from the nuclear recoil. The measured correlation coefficient is $\rho \, = \, -0.45 \pm 0.10$. 
 
 
-The cS1 and cS2 distributions from NR contribution are predicted starting from the nuclear recoil energy spectrum
-of WIMPs inelastic interaction~\cite{inelastic_th}. The average cS1 and cS2 are given by equations~\ref{f:cs1} and~\ref{f:cs2} respectively,
-where $\mathcal{L}_{eff}$ is the liquid xenon NR relative scintillation efficiency, while $S_{ee} \, = \, 0.58$  and $S_{nr} \, = \, 0.95$ describe the scintillation 
-quenching due to the electric field \cite{ScintQuenching}. The parameterization and uncertainties of $\mathcal{L}_{eff}$ as a function of $E_{nr}$ are based on existing 
-direct measurements \cite{run8Result}. The light yield at 122~keVee originate from the same NEST model fit as described above. For the cS2 the parameterization 
-of $Q_{Y}(E_{nr})$ is taken from \cite{QY}.
-Finally all detector related resolution effects are introduced following the prescriptions described in \cite{dataAnalysis}.
+The cS1 and cS2 distributions from the NR contribution are predicted starting from the expected nuclear recoil energy spectrum
+of WIMP inelastic interactions~\cite{Baudis:2013bba}. The average cS1 and cS2 are given by equations~\ref{f:cs1} and~\ref{f:cs2} respectively,
+where $\mathcal{L}_{eff}$ is the liquid xenon relative scintillation efficiency for NRs, while $S_{ee} \, = \, 0.58$  and $S_{nr} \, = \, 0.95$ describe the scintillation 
+quenching  of ER and NRs, respectively, due to the electric field \cite{ScintQuenching}. The parameterisation and uncertainties of $\mathcal{L}_{eff}$ as a function of nuclear recoil energy $E_{nr}$ are based on existing 
+direct measurements \cite{run8Result}. The light yield for 122\,keV ERs is taken from the same NEST model fit as described above. For cS2, the parameterisation 
+of $Q_{Y}(E_{nr})$ is taken from \cite{QY}. Finally, all detector related resolution effects are introduced following the prescriptions described in \cite{Aprile:2012vw}.
 
 \begin{equation}
 cS1_{nr} ~=~ E_{nr} \, \mathcal{L}_{eff}(E_{nr}) \, L_{y} \, \frac{S_{nr}}{S_{ee}}
@@ -83,20 +80,20 @@ cS2_{nr}  ~ = ~ E_{nr} \, Q_{Y}(E_{nr}) \, Y
 \label{f:cs2}
 \end{equation}
 
-The pdf of the ER and NR contributions are then convoluted together to obtain the overall pdf of the signal.
-%The two contribution are summed together in an event-by-event basis using random extraction from the two pdfs. 
+The pdf of the ER and NR contributions are then convoluted together to obtain the overall pdf of the expected signal.
 A 2D (cS1 versus cS2) acceptance map is applied to the signal pdf to reproduce data selection effects. Acceptances are computed separately for each selection 
-criteria using $^{124}$AmBe calibration sample, selections as the outer volume veto and the single scatter interaction represent an exception  and 
-a dedicated computation has been performed in these cases. The selections acceptance average in the region of interest to about $0.80 \pm 0.05$. 
-Figure~\ref{fig:SR} shows an example of full simulated signal model for a WIMP of 100~GeV mass. 
+criteria using the $^{124}$AmBe calibration sample. Other selections such as the liquid xenon veto cut, and the single-scatter interaction represent an exception  and 
+a dedicated computation has been performed in these cases. The combined acceptance  of all selection criteria in the region of interest averages to $\sim$$(0.80\pm0.05)$. 
+Figure~\ref{fig:SR} shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$. 
 
-The signal simulation procedure has been validated reproducing the 39.6~keV xenon line from interaction due to
-$^{124}$AmBe source and has been compared to data. For this comparison the proper  $^{124}$AmBe nuclear recoil and acceptances
-were simulated. The simulated events were found in agreement  with calibration data within statistical uncertainties.
+The signal simulation procedure has been validated by reproducing the 39.6\,keV xenon line from interactions due to neutrons from the 
+$^{124}$AmBe source and comparison to data. For this comparison, the proper  $^{124}$AmBe nuclear recoil and acceptances
+were simulated. The simulated events were in agreement  with calibration data within statistical uncertainties. 
+{\textcolor{red} {Should we show an example, namely a figure from the signal model note?}}
 
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/wimp_in_sr.png}
-  \caption{Signal region and control region, for WIMP of mass 100~GeV.}
+  \caption{Simulated signal (1-9) and control (CR1 and CR2) regions for a WIMP mass 100\,GeV/c$^2$.}
   \label{fig:SR2}
 \end{figure}
 
