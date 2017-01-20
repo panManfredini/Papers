@@ -7,39 +7,37 @@ Particles (WIMPs), which are natural candidates for dark matter. This hypothesis
 and indirect detection experiments, as well as at the LHC~\cite{Bertone:2010zza,Baudis:2016qwx}.
 
 Most direct detection searches focus on elastic scattering of galactic dark matter particles off nuclei, where the keV-scale 
-nuclear recoil energy is to be detected~\cite{Baudis:2012ig,Baudis:2015mpa,Undagoitia:2015gya}. In this work, the 
+nuclear recoil energy is to be detected~\cite{Baudis:2012ig,Undagoitia:2015gya,Baudis:2015mpa}. In this work, the 
 alternative process of inelastic scattering is explored, where a WIMP-nucleus scattering induces a transition to a low-lying 
 excited nuclear state. The experimental signature is a nuclear recoil detected together with the prompt de-excitation 
 photon~\cite{Ellis:1988nb}. 
 
 We consider the $^{129}\text{Xe}$ isotope, which has an abundance of 26.4\% in natural xenon, and a lowest-lying 
-3/2$^{+}$ state at 36.6\,keV above the 1/2$^+$ gound state. The electromnagnetic nuclear decay has a half-life of 0.97\,s. 
-The signatures of inelastic scattering in xenon have been studied in detail in~\cite{Baudis:2013bba}. It was found that this 
-channel is complementary to spin-dependent, elastic scattering, dominating the integrated rates above $\simeq10$\,keV energy 
-depositions. In addition, in case of a positive signal, the observation of inelastic scattering would provide a clear 
+3/2$^{+}$ state at 36.6\,keV above the 1/2$^+$ ground state. The electromagnetic nuclear decay has a half-life of 0.97\,s. 
+The signatures and structure functions for inelastic scattering in xenon have been studied in detail in~\cite{Baudis:2013bba}. It was found that this channel is complementary to spin-dependent, elastic scattering, and that it dominates the integrated rates above $\simeq10$\,keV energy depositions. 
+In addition, in case of a positive signal, the observation of inelastic scattering would provide a clear 
 indication of the spin-dependent nature of the fundamental interaction. 
 
-Our paper is structures as follows.  In Section~\ref{sec:xenon100} we briefly describe the XENON100 detector and the employed data 
-set in this analysis. In Section~\ref{sec:analysis} we detail the data analysis method, including the simulation of the expected signal and the 
-background model. We conclude in Section~\ref{sec:results} with our results and new constraints on inelastic WIMP-nucleus scatters.
+This paper is structured as follows.  In Section~\ref{sec:xenon100} we briefly describe the main features of the XENON100 detector.  In Section~\ref{sec:analysis} we introduce the employed data 
+set in this analysis and detail the data analysis method, including the simulation of the expected signal and the 
+background model. We conclude in Section~\ref{sec:results} with our results, and discuss the new constraints on inelastic WIMP-nucleus interactions.
 
 \section{The XENON100 Detector}
 \label{sec:xenon100}
 
 The XENON100 experiment operates a dual-phase (liquid and gas) xenon time projection chamber (TPC) at the Laboratori Nazionali 
 del Gran Sasso (LNGS) in Italy. It contains 161\,kg of xenon in total,  with  62\,kg in the active region of the TPC. These 
-are monitored by 242 1-inch square, low-radioactivity, UV-sensitive photomultiplier tubes (PMTs) arranged in two arrays, one in the liquid 
+are monitored by 178 1-inch square, low-radioactivity, UV-sensitive photomultiplier tubes (PMTs) arranged in two arrays, one in the liquid 
 and one in the gas. The PMTs detect the prompt scintillation (S1) and the delayed, proportional scintillation signal (S2) 
 created by a particle interacting in the active TPC region. The S2-signal is generated due to ionisation electrons, drifted 
 in an electric field of 530\,V/cm and extracted into the gas phase by a stronger field of $\sim$ 12\,kV/cm, where the proportional scintillation, or electroluminiscence, 
 is produced. These photons carry the $(x,y)$ information of the interaction site, while the $z-$information comes from the drift time measurement. The TPC 
-thus yields a three-dimensional event localisation, with an $(x,y)$ resolution of $<$3\,mm (1\,$\sigma$), and a $z$ resolution of  $<$0.3\,mm (1\,$\sigma$), enabling to reject the majority of background events via fiducial volume cuts~\cite{Aprile:2011dd}. The ratio S2/S1 provides the basis for distinguishing between nuclear recoils (NRs), as induced by fast neutrons and expected from elastic WIMP-nucleus scatters, and electronic recoils (ERs) produced by $\beta$ and $\gamma$-rays. 
+thus yields a three-dimensional event localisation, with an $(x,y)$ resolution of $<$3\,mm (1\,$\sigma$), and a $z$ resolution of  $<$0.3\,mm (1\,$\sigma$), enabling to reject the majority of background events via fiducial volume cuts~\cite{Aprile:2011dd}. The ratio S2/S1 provides the basis for distinguishing between nuclear recoils (NRs), as induced by fast neutrons and expected from elastic WIMP-nucleus scatters, and electronic recoils (ERs) produced by $\beta$ and $\gamma$-rays.  A 4\,cm thick liquid xenon (LXe) layer surrounds the TPC and is monitored by 64 1-inch square PMTs, providing an effective active veto for further background reduction.
 
 XENON100 has acquired science data between 2008-2015, and has set competitive constraints on spin-independent~\cite{Aprile:2012nq,Aprile:2016swn} 
 and spin-dependent~\cite{Aprile:2013doa,Aprile:2016swn} elastic WIMP-nucleus 
-scatters, on solar axions and galactic ALPs~\cite{Aprile:2014eoa}, as well as on leptophilic dark matter models~\cite{Aprile:2015ade,Aprile:2015ibr,Aprile:2017yea}.
+scatters, on solar axions and galactic ALPs~\cite{Aprile:2014eoa}, as well as on leptophilic dark matter models~\cite{Aprile:2015ade,Aprile:2015ibr,Aprile:2017yea} that were invented to explain the annual modulation signature observed in the DAMA/LIBRA experiment~\cite{Bernabei:2012in}.
 
-Here we explore a potential new signature in the XENON100 detector, caused by spin-dependent, inelastic WIMP-$^{129}$Xe scatters. The expected  
-inelastic scattering signature is a combination of an ER and a NR, due to the short lifetime of the excited nuclear state and  the short mean free path of $\sim$0.15\,mm of the 39.6\,keV de-excitation photon. 
+Here we explore a new potential dark matter channel in the XENON100 detector, caused by spin-dependent, inelastic WIMP-$^{129}$Xe interactions. The expected inelastic scattering signature is a combination between an ER and a NR, due to the short lifetime of the excited nuclear state and  the short mean free path of $\sim$0.15\,mm of the 39.6\,keV de-excitation photon. 
 
 

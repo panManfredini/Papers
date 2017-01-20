@@ -1,8 +1,7 @@
 \section{Data Analysis}
 \label{sec:analysis}
 
-This analysis is performed using XENON100 Run-II science data, which corresponds to a data set with an exposure of 224.6~live days. The detector response to
-ERs has been characterised with $^{60}$Co and $^{232}$Th calibration sources, while the response to NRs was calibrated with an $^{241}$AmBe $(\alpha,n)$-source. This fast neutron source gives rise to elastic and inelastic neutron-nucleus scatters, and can thus be employed to define the expected signal region for inelastic WIMP-nucleus scatters.
+This analysis is performed using XENON100 Run-II science data, with 224.6~live days of data taking. The detector's response to ERs has been characterised with $^{60}$Co and $^{232}$Th calibration sources, while the response to NRs was calibrated with an $^{241}$AmBe $(\alpha,n)$-source. This fast neutron source gives rise to elastic and inelastic neutron-nucleus scatters, and can thus be employed to define the expected signal region for inelastic WIMP-nucleus scatters.
 
 \subsection{Signal Correction} 
 
@@ -10,25 +9,24 @@ A particle interaction in the liquid xenon produces an S1 and a correlated S2 si
 
 \subsection{Signal Region and Event Selection} 
 
-As explained in Section~\ref{sec:intro}, the inelastic scattering of a WIMP with a $^{129}$Xe nucleus produces an energy deposit via a NR with subsequent emission of  
+As explained in Section~\ref{sec:intro}, the inelastic scattering of a WIMP with a $^{129}$Xe nucleus is expected to produce an energy deposit via a NR with subsequent emission of  
 a 39.6\,keV de-excitation photon. The largest fraction of the energy released in the event is via an ER, due to the emitted photon which loses its energy in the LXe.
 This represents an unusual signature compared to the one expected from an elastic scatter, and brings the signal region to overlap with the ER background region.
+{\textcolor{red} {Should we mention that AmBe data is used here, to define these regions? And should we provide somewhere the used energy ranges in cS1 and cS2?}}
 The selected region of interest (ROI) for this analysis surrounds the 39.6\,keV xenon line in the cS1-cS2 plane and is further divided into
-sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}.  These sub-regions were defined such as to contain roughly a similar number of expected background events in each region. The control regions CR1 and CR2 are chosen to be as close as possible to the signal regions,  and are used as cross check of the background shape distribution.
+sub-regions, as shown in Figures~\ref{fig:SR} and~\ref{fig:SR2}.  These sub-regions were defined such as to roughly contain a similar number of expected background events in each region. The control regions (denoted as CR1 and CR2 in the figures), are selected to be as close as possible to the signal regions,  and are used for cross checks of the background shape distribution.
 
-Apart from the condition to occur in the defined region of interest in the cS2-cS1-plane, valid events are required to fulfil several selection criteria, 
+Apart from the condition to occur in the defined region of interest in the (cS2,cS1)-plane, valid events are required to fulfil several selection criteria, 
 which can be summarised as follows: basic data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detector's active LXe shield, 
-selection of single-scatter events and of a predefined fiducial volume. 
-
-This analysis closely follows the event selection criteria described in detail in \cite{Aprile:2012vw} for Run-II, with only a few exceptions reported in what follows. 
+selection of single-scatter events and of a predefined fiducial volume.  Our analysis closely follows the event selection criteria described in detail in \cite{Aprile:2012vw} for Run-II, with only a few exceptions, as explained in the following. 
 The cut on the width of the S2 signal as a function of drift time (where the maximal drift time is 176\,$\mu$s and the width values range from $\sim$1-2\,$\mu$s) has been optimised on a sample of events selected from the 39.6\,keV line and set to a 95\% acceptance on these. This cut ensures that the S2-signal width is consistent with the $z$-position calculated from the observed time difference between the S1 and S1 signals. Events are required to be single-scatters by applying a threshold cut on the size of the 
 second largest S2 peak. For this analysis, the threshold has been optimised to 160\,PE and set constant as function of S2 signal size. 
-Finally, the chosen fiducial volume corresponds to 34\,kg of liquid xenon.
+Finally, the chosen fiducial volume corresponds to 34\,kg of liquid xenon, which is identical to the one used for the elastic scattering channel~\cite{Aprile:2012vw}. 
 
 
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/bkg_in_sr.png}
-  \caption{Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the cS2 versus cS1 plane. Their definition is given in the text.}
+  \caption{Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the cS2 versus cS1 plane. Their definition is given in the text. {\textcolor{red} {We should also write which data is shown here; if this is the first plot in the paper, it may not be clear why the signal and control regions are where they are...}}}
   \label{fig:SR}
 \end{figure}
 
@@ -39,10 +37,10 @@ Finally, the chosen fiducial volume corresponds to 34\,kg of liquid xenon.
 The detector response to inelastic WIMP-$^{129}$Xe interactions was simulated using an empirical signal model.
 The total deposited energy is divided into two independent contributions: one coming from the 39.6\,keV de-excitation photon and the other  from  
 the simultaneous nuclear recoil of the xenon atom. The detected light (S1) and charge (S2) signals are simulated separately for each of the two contributions 
-and then added together. This is due to the fact that the light and charge yields depend on the type of interaction (ER vs. NR), and on the deposited energy.
+and then added together. This recipe has been followed  because the light and charge yields depend both on the type of interaction (ER vs. NR), and on the deposited energy.
 
 
-The distribution of an ER induced by the de-excitation photon in the cS1-cS2 plane  is simulated assuming a two dimensional normal probability distribution function (pdf), $f(cS1_{er},cS2_{er})$, 
+The distribution of an ER induced by the de-excitation photon in the (cS1,cS2)-plane  is simulated assuming a two dimensional normal probability distribution function (pdf), $f(cS1_{er},cS2_{er})$, 
 described (apart from a constant normalisation factor) by the following equation:
 
 \begin{multline}
@@ -56,7 +54,7 @@ represent the average observed $cS1_{er}$ and $cS2_{er}$ signals given a 39.6\,k
 while $\rho$ stands for the correlation between the cS1 and cS2 signals. The detector-related light yield $L_y$  at 39.6\,keV, necessary to evaluate the average number of prompt photons detected 
 ($\mu_{cS1}$), is obtained from the NEST model~\cite{NEST,Geant1,Geant2} fit to data collected with several $\gamma$-lines.  The average light yield at 39.6\,keV is 2.7\,PE/keV.
 
-The same model is used to predict the charge yield at 39.6\,keV, which is afterwards scaled according to the detector's secondary scintillation gain $Y$. 
+The same model is used to predict the charge yield at 39.6\,keV, which is then scaled according to the detector's secondary scintillation gain $Y$. 
  The latter is determined from detector's response to single electrons~\cite{SingleE}.
 The energy resolution at 39.6\,keV in cS1 and cS2 has been measured to be 15.8\% and 14.7\%, respectively, and is used to extract the standard 
 deviations $\sigma_{cs1}$, $\sigma_{cs2}$.  The correlation parameter is assumed to be independent of energy (at least in the considered narrow energy range) and measured
@@ -80,14 +78,15 @@ cS2_{nr}  ~ = ~ E_{nr} \, Q_{Y}(E_{nr}) \, Y
 \label{f:cs2}
 \end{equation}
 
+{\textcolor{red} {Should we also give the numerical values of $L_Y$ and $Y$?}}
 The pdf of the ER and NR contributions are then convoluted together to obtain the overall pdf of the expected signal.
 A 2D (cS1 versus cS2) acceptance map is applied to the signal pdf to reproduce data selection effects. Acceptances are computed separately for each selection 
 criteria using the $^{124}$AmBe calibration sample. Other selections such as the liquid xenon veto cut, and the single-scatter interaction represent an exception  and 
 a dedicated computation has been performed in these cases. The combined acceptance  of all selection criteria in the region of interest averages to $\sim$$(0.80\pm0.05)$. 
-Figure~\ref{fig:SR} shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$. 
+Figure~\ref{fig:unc} shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$. 
 
 The signal simulation procedure has been validated by reproducing the 39.6\,keV xenon line from interactions due to neutrons from the 
-$^{124}$AmBe source and comparison to data. For this comparison, the proper  $^{124}$AmBe nuclear recoil and acceptances
+$^{124}$AmBe source and comparison to data. For this comparison, the  $^{124}$AmBe nuclear recoil interactions and their acceptances
 were simulated. The simulated events were in agreement  with calibration data within statistical uncertainties. 
 {\textcolor{red} {Should we show an example, namely a figure from the signal model note?}}
 
@@ -104,9 +103,8 @@ The background in the region of interest for inelastic scattering is dominated b
 
 
 The expected background is modelled using data from the $^{60}$Co calibration campaign, which are assumed to well represent the background density distribution 
-in the cS1-cS2 plane. The calibration sample yields  about $2.2\times10^4$ events in the ROI; these are then scaled to the science data according to a measured scale 
-factor $\tau_{bkg}$. This scale factor, which is merely the ratio between the data and calibration sample yields, is measured in the two control regions shown in Figure~\ref{fig:SR} and labelled CR1 and CR2. The two control 
-regions give compatible results and the computed average is $\tau_{bkg} \, =  \, 0.034 \pm 0.002 $, where the reported uncertainty 
+in the (cS1,cS2)-plane. The calibration sample yields  about $2.2\times10^4$ events in the ROI; these are then scaled to the science data according to a measured scale 
+factor $\tau_{bkg}$. This scale factor, which is merely the ratio between the data and calibration sample yields, is measured in the two control regions shown in Figure~\ref{fig:SR} (labelled CR1 and CR2). The two control regions give compatible results and the computed average is $\tau_{bkg} \, =  \, 0.034 \pm 0.002 $, where the reported uncertainty 
 is of statistical nature only.
 
 The distribution of the calibration sample has been compared to the data of the science run in the two control regions,
