@@ -15,7 +15,7 @@ This analysis is performed using XENON100 Run-II science data, with 224.6~live d
 	\end{subfigure}
 	\caption{\raggedright Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the (cS2,cS1)-plane.
 		\textcolor{red}{Figure (a) shows the signal distribution for a simulated WIMP of mass 100\,GeV/c$^2$, while Figure (b) is obtained using  $^{60}$Co calibration data 
-	and represent the background expectation distribution.}}
+	and represents the background expectation distribution.}}
   \label{fig:SR}
 \end{figure*}
 
@@ -31,8 +31,7 @@ a 39.6\,keV de-excitation photon. The largest fraction of the energy released in
 This represents an unusual signature compared to the one expected from an elastic scatter, and brings the signal region to overlap with the ER background region.
 %{\textcolor{red} {Should we mention that AmBe data is used here, to define these regions? And should we provide somewhere the used energy ranges in cS1 and cS2?}}
 The selected region of interest (ROI) for this analysis surrounds the 39.6\,keV xenon line in the (cS1,cS2)-plane 
-\textcolor{red} {and is based on $^{124}$AmBe calibration data, it extends from 60 to 200\,PE in cS1 and from 4$\times \, 10^3$ to 16$\times \, 10^3$\,PE in cS2, it is further divided  into sub-regions}
-\sout{and is further divided into sub-regions,} as shown 
+\textcolor{red} {and is based on $^{241}$AmBe calibration data. It extends from 60 to 200\,PE in cS1 and from 4$\times \, 10^3$ to 16$\times \, 10^3$\,PE in cS2, and it is further divided  into sub-regions}, as shown 
 in Figure~\ref{fig:SR}.  These sub-regions were defined such as to roughly contain a similar number of expected background events in each region. The control regions (denoted as CR1 and CR2 in the figures), are selected to be as close as possible to the signal regions,  and are used for cross checks of the background shape distribution.
 
 Apart from the condition to occur in the defined region of interest in the (cS1,cS2)-plane, valid events are required to fulfil several selection criteria, 
@@ -42,10 +41,6 @@ selection of single-scatter events and of a predefined fiducial volume
 Our analysis closely follows the event selection criteria described in detail in \cite{Aprile:2012vw} for Run-II, with only a few exceptions, as explained in the following. 
 The cut on the width of the S2 signal as a function of drift time (where the maximal drift time is 176\,$\mu$s and the width values range from $\sim$1-2\,$\mu$s) has been optimized on a sample of events selected from the 39.6\,keV line and set to a 95\% acceptance on these. This cut ensures that the S2-signal width is consistent with the $z$-position calculated from the observed time difference between the S1 and S2 signals. Events are required to be single-scatters by applying a threshold cut on the size of the 
 second largest S2 peak. For this analysis, the threshold has been optimized to 160\,PE and set constant as function of S2 signal size. 
-\sout{Finally, the chosen fiducial volume corresponds to 34\,kg of liquid xenon, which is identical to the one used for the elastic scattering channel~\cite{Aprile:2012vw}}. 
-
-
-
 
 
 \subsection{Signal Simulation} 
@@ -56,7 +51,7 @@ the simultaneous nuclear recoil of the xenon atom. The detected light (S1) and c
 and then added together. This recipe has been followed  because the light and charge yields depend both on the type of interaction (ER vs. NR), and on the deposited energy.
 
 
-The distribution of an ER induced by the de-excitation photon in the (cS1,cS2)-plane  is simulated assuming a two dimensional normal probability distribution function (pdf), $f(cS1_{er},cS2_{er})$, 
+The distribution of an ER induced by the de-excitation photon in the (cS1,cS2)-plane  is simulated assuming a two dimensional normal probability distribution function (pdf), $f(\rm{cS1}_{er},\rm{cS2}_{er})$, 
 described (apart from a constant normalization factor) by the following equation:
 
 \begin{multline}
@@ -66,17 +61,17 @@ described (apart from a constant normalization factor) by the following equation
 \label{f:2dgaus}
 \end{multline}
 where $\mu_{cS1}$ and $\mu_{cS2}$ 
-represent the average observed $cS1_{er}$ and $cS2_{er}$ signals given a 39.6\,keV ER, $\sigma_{cs1}$ and $\sigma_{cs2}$ are the standard deviation in $cS1_{er}$ and $cS2_{er}$ respectively,
+represent the average observed $\rm{cS1_{er}}$ and $\rm{cS2_{er}}$ signals given a 39.6\,keV ER, $\sigma_{cs1}$ and $\sigma_{cs2}$ are the standard deviation in $\rm{cS1_{er}}$ and $\rm{cS2_{er}}$ respectively,
 while $\rho$ stands for the correlation between the cS1 and cS2 signals. The detector-related light yield $L_y$  at 39.6\,keV, necessary to evaluate the average number of prompt photons detected 
 ($\mu_{cS1}$), is obtained from the NEST model~\cite{NEST,Geant1,Geant2} fit to data collected with several $\gamma$-lines.
 %%%%% REMOVEME %%%%%%
-\sout{The average light yield at 39.6\,keV is 2.7\,PE/keV.}
+%The average light yield at 39.6\,keV is 2.7\,PE/keV.
 
 The same model is used to predict the charge yield at 39.6\,keV, which is then scaled according to the detector's secondary scintillation gain $Y$. 
  The latter is determined from detector's response to single electrons~\cite{SingleE}.
 The energy resolution at 39.6\,keV in cS1 and cS2 has been measured to be 15.8\% and 14.7\%, respectively, and is used to extract the standard 
 deviations $\sigma_{cs1}$, $\sigma_{cs2}$.  The correlation parameter is assumed to be independent of energy (at least in the considered narrow energy range) and measured
-using the 164\,keV line from the decay of the $^{131m}$Xe isomer ($T_{1/2}$=11.8\,d) produced during the  $^{124}$AmBe run. This $\gamma$-line is chosen because it allows to disentangle efficiently the contribution from the nuclear recoil. The measured correlation coefficient is $\rho \, = \, -0.45 \pm 0.10$. 
+using the 164\,keV line from the decay of the $^{131m}$Xe isomer ($T_{1/2}$=11.8\,d) produced during the  $^{241}$AmBe run. This $\gamma$-line is chosen because it allows to disentangle efficiently the contribution from the nuclear recoil. The measured correlation coefficient is $\rho \, = \, -0.45 \pm 0.10$. 
 
 
 The cS1 and cS2 distributions from the NR contribution are predicted starting from the expected nuclear recoil energy spectrum
@@ -100,7 +95,7 @@ cS2_{nr}  ~ = ~ E_{nr} \, Q_{Y}(E_{nr}) \, Y
 %{\textcolor{red} {Should we also give the numerical values of $L_Y$ and $Y$?}}
 The pdf of the ER and NR contributions are then convoluted together to obtain the overall pdf of the expected signal.
 A 2D (cS1 versus cS2) acceptance map is applied to the signal pdf to reproduce data selection effects. Acceptances are computed separately for each selection 
-criteria using the $^{124}$AmBe calibration sample. \textcolor{red}{Acceptances of} other selections such as the liquid xenon veto cut, and the single-scatter interaction represent an exception  and 
+criteria using the $^{241}$AmBe calibration sample. \textcolor{red}{Acceptances of} other selections such as the liquid xenon veto cut, and the single-scatter interaction represent an exception  and 
 a dedicated computation has been performed in these cases. The combined acceptance  of all selection criteria in the region of interest averages to $\sim$$(0.80\pm0.05)$. 
 Figure~\ref{fig:unc} shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$. 
 
@@ -126,7 +121,7 @@ The distribution of the calibration sample has been compared to the data of the 
 and agreement was found within statistical uncertainties. Furthermore, $^{60}$Co calibration data have been compared in the region of interest to  
 data from the $^{232}$Th calibration campaign, and the largest deviation between the two shapes is within 4\%. 
 %%%%% Said later anyway, propose to remove it here %%%%%
-\sout{An additional systematic uncertainty of 4\% has thus been applied to the expected background yield of each sub-region of the ROI.}
+%\sout{An additional systematic uncertainty of 4\% has thus been applied to the expected background yield of each sub-region of the ROI.}
 
 %%%%%% DEPENDS on the journal  %%%%%
 %{\textcolor{red} {Should we show a figure, namely the agreement of data and BG model for the control regions? Like the second figure in the background model check note.}}
@@ -137,8 +132,7 @@ data from the $^{232}$Th calibration campaign, and the largest deviation between
 
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/wimp_sys_unc.png}
-  \caption{Predicted signal \textcolor{red} {yield in each sub-region} (blue curve), along with statistical and systematic uncertainties (cyan area) simulated for a WIMP mass of 100\,GeV/c$^2$.  
-	   The signal has been scaled for a total number of 50 events. }
+\caption{Predicted signal \textcolor{red} {yield in each sub-region} (blue curve), along with statistical and systematic uncertainties (cyan area) simulated for a WIMP mass of 100\,GeV/c$^2$.  The signal has been scaled for a total number of 50 events.}
   \label{fig:unc}
 \end{figure}
 
@@ -147,7 +141,7 @@ Uncertainties on the  prediction of the total number of background events arise 
 factor, $\tau_{bkg}$, and amount to 6\%. % contribution of radiogenic neutrons are neglected. 
 Systematic uncertainty on the shape of the predicted background distribution are assessed by the maximal observed discrepancy in the ROI between
 the $^{60}$Co and $^{232}$Th calibration samples.  
-\sout{As explained} A 4\% systematic uncertainty is added  to the expected yield of each sub-region.
+ A 4\% systematic uncertainty is added  to the expected yield of each sub-region.
 Uncertainties belonging to different sub-regions in the ROI are considered independent from one another.
 
 Uncertainties on the total yield of signal events arising from selections acceptance uncertainties are found to be very weakly dependent on 
@@ -163,9 +157,8 @@ with respect to nominal. Figure~\ref{fig:unc} shows an example of such a systema
 
 
 All the uncertainties discussed here are parameterised 
-\sout{with}  \textcolor{red}{within} 
+ \textcolor{red}{within} 
 a binned profile likelihood function using the \textcolor{red}{ROOSTAT-ROOFIT framework}~\cite{roostat,roofit}.
-\sout{using the framework from}~\cite{roostat,roofit}.
 All the parameters related to systematic uncertainties are assumed to be normally distributed.
 
 
