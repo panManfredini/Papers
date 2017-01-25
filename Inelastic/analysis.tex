@@ -5,17 +5,11 @@ This analysis is performed using XENON100 Run-II science data, with 224.6~live d
 
 
 \begin{figure*}[t!]
-	\begin{subfigure}{0.49\linewidth}
-		\includegraphics[width=\linewidth]{images/wimp_in_sr.png}
-		\subcaption{}
-	\end{subfigure}
-	\begin{subfigure}{0.49\linewidth}
-		\includegraphics[width=\linewidth]{images/bkg_in_sr.png}
-		\subcaption{}
-	\end{subfigure}
-	\caption{\raggedright Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the (cS2,cS1)-plane.
-		\textcolor{red}{Figure (a) shows the signal distribution for a simulated WIMP of mass 100\,GeV/c$^2$, while Figure (b) is obtained using  $^{60}$Co calibration data 
-	and represents the background expectation distribution.}}
+	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/wimp_in_sr.png}}
+	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/bkg_in_sr.png}}
+	\caption{Signal (1-9) and control (CR1 and CR2) regions for the inelastic WIMP-$^{129}$Xe interaction in the (cS2,cS1)-plane.
+		Figure (a) shows the signal distribution for a simulated WIMP of mass 100\,GeV/c$^2$ normalized to 50\,events, while Figure (b) is obtained using  
+		normalized $^{60}$Co calibration data and represents the background expectation distribution.}
   \label{fig:SR}
 \end{figure*}
 
@@ -29,15 +23,12 @@ A particle interaction in the liquid xenon produces an S1 and a correlated S2 si
 As explained in Section~\ref{sec:intro}, the inelastic scattering of a WIMP with a $^{129}$Xe nucleus is expected to produce an energy deposit via a NR with subsequent emission of  
 a 39.6\,keV de-excitation photon. The largest fraction of the energy released in the event is via an ER, due to the emitted photon which loses its energy in the LXe.
 This represents an unusual signature compared to the one expected from an elastic scatter, and brings the signal region to overlap with the ER background region.
-%{\textcolor{red} {Should we mention that AmBe data is used here, to define these regions? And should we provide somewhere the used energy ranges in cS1 and cS2?}}
 The selected region of interest (ROI) for this analysis surrounds the 39.6\,keV xenon line in the (cS1,cS2)-plane 
-\textcolor{red} {and is based on $^{241}$AmBe calibration data. It extends from 60 to 200\,PE in cS1 and from 4$\times \, 10^3$ to 16$\times \, 10^3$\,PE in cS2, and it is further divided  into sub-regions}, as shown 
-in Figure~\ref{fig:SR}.  These sub-regions were defined such as to roughly contain a similar number of expected background events in each region. The control regions (denoted as CR1 and CR2 in the figures), are selected to be as close as possible to the signal regions,  and are used for cross checks of the background shape distribution.
+and is based on $^{241}$AmBe calibration data. The ROI extends from 60 to 210\,PE in cS1 and from 4$\times \, 10^3$ to 16$\times \, 10^3$\,PE in cS2, furthermore it is divided  into sub-regions, as shown in Figure~\ref{fig:SR}.  These sub-regions were defined such as to roughly contain a similar number of expected background events in each region. The control regions (denoted as CR1 and CR2 in the figures), are selected to be as close as possible to the ROI,  and are used for cross checks of the background shape distribution.
 
 Apart from the condition to occur in the defined region of interest in the (cS1,cS2)-plane, valid events are required to fulfil several selection criteria, 
-which can be summarized as follows: basic data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detector's active LXe shield, 
-selection of single-scatter events and of a predefined fiducial volume 
-\textcolor{red}{of 34\,kg}.  
+which can be summarized as follows: basic data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detector's 
+active LXe shield, selection of single-scatter events and of a predefined fiducial volume of 34\,kg.  
 Our analysis closely follows the event selection criteria described in detail in \cite{Aprile:2012vw} for Run-II, with only a few exceptions, as explained in the following. 
 The cut on the width of the S2 signal as a function of drift time (where the maximal drift time is 176\,$\mu$s and the width values range from $\sim$1-2\,$\mu$s) has been optimized on a sample of events selected from the 39.6\,keV line and set to a 95\% acceptance on these. This cut ensures that the S2-signal width is consistent with the $z$-position calculated from the observed time difference between the S1 and S2 signals. Events are required to be single-scatters by applying a threshold cut on the size of the 
 second largest S2 peak. For this analysis, the threshold has been optimized to 160\,PE and set constant as function of S2 signal size. 
@@ -66,7 +57,6 @@ while $\rho$ stands for the correlation between the cS1 and cS2 signals. The det
 ($\mu_{cS1}$), is obtained from the NEST model~\cite{NEST,Geant1,Geant2} fit to data collected with several $\gamma$-lines.
 %%%%% REMOVEME %%%%%%
 %The average light yield at 39.6\,keV is 2.7\,PE/keV.
-
 The same model is used to predict the charge yield at 39.6\,keV, which is then scaled according to the detector's secondary scintillation gain $Y$. 
  The latter is determined from detector's response to single electrons~\cite{SingleE}.
 The energy resolution at 39.6\,keV in cS1 and cS2 has been measured to be 15.8\% and 14.7\%, respectively, and is used to extract the standard 
@@ -95,9 +85,9 @@ cS2_{nr}  ~ = ~ E_{nr} \, Q_{Y}(E_{nr}) \, Y
 %{\textcolor{red} {Should we also give the numerical values of $L_Y$ and $Y$?}}
 The pdf of the ER and NR contributions are then convoluted together to obtain the overall pdf of the expected signal.
 A 2D (cS1 versus cS2) acceptance map is applied to the signal pdf to reproduce data selection effects. Acceptances are computed separately for each selection 
-criteria using the $^{241}$AmBe calibration sample. \textcolor{red}{Acceptances of} other selections such as the liquid xenon veto cut, and the single-scatter interaction represent an exception  and 
+criteria using the $^{241}$AmBe calibration sample. Acceptances of other selections such as the liquid xenon veto cut, and the single-scatter interaction represent an exception  and 
 a dedicated computation has been performed in these cases. The combined acceptance  of all selection criteria in the region of interest averages to $\sim$$(0.80\pm0.05)$. 
-Figure~\ref{fig:unc} shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$. 
+Figure~\ref{fig:SR}\,(a) shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$. 
 
 The signal simulation procedure has been validated by reproducing the 39.6\,keV xenon line from interactions due to neutrons from the 
 $^{124}$AmBe source and compared to data. For this comparison, the  $^{124}$AmBe nuclear recoil interactions and their acceptances
@@ -132,7 +122,7 @@ data from the $^{232}$Th calibration campaign, and the largest deviation between
 
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/wimp_sys_unc.png}
-\caption{Predicted signal \textcolor{red} {yield in each sub-region} (blue curve), along with statistical and systematic uncertainties (cyan area) simulated for a WIMP mass of 100\,GeV/c$^2$.  The signal has been scaled for a total number of 50 events.}
+\caption{Predicted signal yield in each sub-region (blue curve), along with statistical and systematic uncertainties (shaded area) simulated for a WIMP mass of 100\,GeV/c$^2$.  The signal has been scaled for a total number of 50 events.}
   \label{fig:unc}
 \end{figure}
 
@@ -152,13 +142,11 @@ using the respective uncertainties on the measures of $L_y$, $\mathcal{L}_{eff}$
 that these uncertainties mainly affect the pdf of the signal model in the ROI, and very weakly the total signal yield. 
 They are taken into account by simulating several signal pseudo-samples for each WIMP mass, where the pseudo-samples are produced 
 by varying the model parameters within their $\pm 1$ standard deviations. 
-For each sub-region an overall uncertainty is then computed, by adding in quadrature the variations of each pseudo-sample 
+For each sub-region, an overall uncertainty is then computed by adding in quadrature the variations of each pseudo-sample 
 with respect to nominal. Figure~\ref{fig:unc} shows an example of such a systematic uncertainty computation for a WIMP mass of 100\,GeV/c$^2$.
 
 
-All the uncertainties discussed here are parameterised 
- \textcolor{red}{within} 
-a binned profile likelihood function using the \textcolor{red}{ROOSTAT-ROOFIT framework}~\cite{roostat,roofit}.
+All the uncertainties discussed here are parameterised within a binned profile likelihood function using the ROOSTAT-ROOFIT framework~\cite{roostat,roofit}.
 All the parameters related to systematic uncertainties are assumed to be normally distributed.
 
 
