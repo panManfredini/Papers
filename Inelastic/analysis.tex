@@ -38,6 +38,20 @@ second largest S2 peak. For this analysis, the threshold has been optimized to 1
 \subsection{Signal Simulation} 
 \label{sec:signal}
 
+\begin{figure*}[t!]
+	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/mc_ambe_comp_contour.png}}
+	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/test_projections.png}} 
+%	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/mc_ambe_comp_slice1.png}} \\
+%	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/mc_ambe_comp_slice2.png}}
+%	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/mc_ambe_comp_slice3.png}}
+	\caption{A simulation of the 39.6\,keV  xenon line activated from $^{241}$AmBe neutrons is compared with  data.
+		 Figure~(a) compares contours of equal density in the (cS1,cS2)-plane, while Figure~(b) shows the same distribution projected in cS1 for
+		 several ranges of cS2, the histograms are normalized to unit area. Light and dark blue represent simulation and data, respectively.
+		}
+		
+  \label{fig:mc_comp}
+\end{figure*}
+
 The detector response to inelastic WIMP-$^{129}$Xe interactions was simulated using an empirical signal model, described in this section.
 The total deposited energy is divided into two independent contributions: one coming from the 39.6\,keV de-excitation photon and the other  from  
 the simultaneous nuclear recoil of the xenon atom. The detected light (S1) and charge (S2) signals are simulated separately for each of the two contributions 
@@ -92,11 +106,12 @@ The pdf of the ER and NR contributions are then convolved  to obtain the overall
 A 2D (cS1 versus cS2) acceptance map is applied to the signal pdf to reproduce data selection effects. Acceptances are computed separately for each selection 
 criteria using the $^{241}$AmBe calibration sample. Acceptances of other selections such as the liquid xenon veto cut, and the single-scatter interaction, represent an exception  for which  
 a dedicated computation has been performed. The combined acceptance  of all selection criteria in the region of interest averages to $\sim$$(0.80\pm0.05)$. 
-Figure~\ref{fig:SR}\,(a) shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$. 
+Figure~\ref{fig:SR}\,(a) shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$, normalized to 50 events. 
 
-The signal simulation procedure has been validated by reproducing the 39.6\,keV xenon line from interactions due to neutrons from the 
-$^{124}$AmBe source and compared to data. The simulated events were in agreement  with calibration data within statistical uncertainties. 
-More detail on this validation campaign are reported in the appendix. 
+\input{appendix} 
+%The signal simulation procedure has been validated by reproducing the 39.6\,keV xenon line from interactions due to neutrons from the 
+%$^{241}$AmBe source and compared to data. The simulated events were in agreement  with calibration data within statistical uncertainties. 
+%More detail on this validation campaign are reported in the appendix. 
 %%%%%% DEPENDS on the journal  %%%%%
 %{\textcolor{red} {Should we show an example, namely a figure from the signal model note?}}
 
@@ -114,7 +129,7 @@ is of statistical nature only.
 
 The distribution of the calibration sample has been compared to the data of the science run in the two control regions,
 and agreement was found within statistical uncertainties. Furthermore, $^{60}$Co calibration data have been compared in the region of interest to  
-data from the $^{232}$Th calibration campaign, and the largest deviation between the two shapes is within 4\%. 
+data from the $^{232}$Th calibration campaign, and systematic uncertainties assessed based on it.
 %%%%% Said later anyway, propose to remove it here %%%%%
 %\sout{An additional systematic uncertainty of 4\% has thus been applied to the expected background yield of each sub-region of the ROI.}
 
@@ -127,7 +142,7 @@ data from the $^{232}$Th calibration campaign, and the largest deviation between
 
 \begin{figure}[t!]
   \includegraphics[width=\linewidth]{images/wimp_sys_unc.png}
-\caption{Predicted signal yield in each sub-region (blue curve), along with statistical and systematic uncertainties (shaded area) simulated for a WIMP mass of 100\,GeV/c$^2$.  The signal has been scaled for a total number of 50 events.}
+  \caption{Predicted signal yield in each sub-region (blue curve), along with statistical and systematic uncertainties (shaded area) simulated for a WIMP mass of 100\,GeV/c$^2$.  The signal has been scaled for a total number of 50 events. The sub-regions are defined in Figure~\ref{fig:SR}.}
   \label{fig:unc}
 \end{figure}
 
@@ -136,7 +151,7 @@ Uncertainties on the  prediction of the total number of background events arise 
 factor, $\tau_{\text{bkg}}$, and amount to 6\%. % contribution of radiogenic neutrons are neglected. 
 Systematic uncertainty on the shape of the predicted background distribution are assessed by the maximal observed discrepancy in the ROI between
 the $^{60}$Co and $^{232}$Th calibration samples. The two sample's normalized yield are compared in each sub-region and the overall largest deviation (incompatible
-with statistical fluctuation) is found to be within 4\%.  A  systematic uncertainty of 4\% is then assigned  to the expected yield of each sub-region.
+with statistical fluctuation) is found to be within 4\%.  Consequently, a systematic uncertainty of 4\% is assigned  to the expected yield of each sub-region.
 Uncertainties belonging to different sub-regions in the ROI are considered independent from one another.
 
 Uncertainties on the total yield of signal events arising from selections are found to be only very weakly dependent on 
