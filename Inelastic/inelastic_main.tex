@@ -22,6 +22,7 @@
  reprint,
 superscriptaddress,
 linenumbers,
+longbibliography,
 %groupedaddress,
 %unsortedaddress,
 %runinaddress,
@@ -53,12 +54,13 @@ linenumbers,
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%\usepackage[%showframe,%Uncomment any one of the following lines to test 
 %%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
 %%text={7in,10in},centering,
 %%margin=1.5in,
-%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
 %%height=10in,a5paper,hmargin={3cm,0.8in},
+%total={6.5in,8.75in},bottom=1.2in, top=0.5in
 %]{geometry}
 
 %\usepackage[sorting=none]{biblatex}
@@ -134,7 +136,7 @@ linenumbers,
 
 \author{P.~Barrow}\zurich
 
-\author{L.~Baudis}\zurich
+\author{L.~Baudis}\email[E-mail: ]{lbaudis@physik.uzh.ch}\zurich
 
 \author{B.~Bauermeister}\stockholm
 
@@ -240,7 +242,7 @@ linenumbers,
 
 \author{J.~A.~M.~Lopes}\altaffiliation[Also with ]{Coimbra Engineering Institute, Coimbra, Portugal}\coimbra
 
-\author{A.~Manfredini}\wis
+\author{A.~Manfredini}\email[E-mail: ]{alessandro.manfredini@weizmann.ac.il}\wis 
 
 \author{I.~Maris}\nyuad
 
@@ -350,7 +352,7 @@ linenumbers,
 
 \author{Y.~Zhang.}\columbia
 
-\collaboration{XENON Collaboration}\email{xenon@lngs.infn.it}\noaffiliation
+\collaboration{XENON Collaboration}\email[E-mail: ]{xenon@lngs.infn.it}\noaffiliation
 
 
 \date{\today}
@@ -377,7 +379,7 @@ We present the first constraints on the spin-dependent, inelastic scattering cro
 %\input{appendix}
 
 \bibliography{inelastic_main} 
-\bibliographystyle{unsrt}
+%\bibliographystyle{abbrv}
 %\printbibliography
 
 \end{document}
