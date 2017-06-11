@@ -1,0 +1,254 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+ 
+\usepackage{color}
+ 
+
+\begin{document}
+
+\title{ \textbf{ Search for WIMP inelastic scattering off xenon nuclei with XENON100} \\  Response on Referee report -- DE12171/Aprile  }
+%\author{}
+
+\maketitle
+
+
+%\section{Introduction}
+%Here is the text of your introduction.
+
+
+\begin{itemize}
+	\item {\em{General: are these new SD limits isospin independent, applying to both protons and neutrons, unlike the traditional elastic SD for dark matter? If so, should be indicated right off the bat in the abstract.}}
+\end{itemize}
+
+
+\begin{itemize}
+	\item{ \em{Introduction, third paragraph: Can you add a sentence further
+elucidating how it is possible for dark matter, of the masses and
+cross-sections you probe in this paper, to fail to be detected through
+elastic scattering, given current existing world-best limits from
+XENON1T and LUX and PandaX, yet still be possible through inelastic?
+It was still unclear to me. Basically, I want to understand if there
+was any reasonable scenario under which you could’ve seen a signal, or
+whether that was already impossible and you were “doomed” to only set
+a limit. This changes the theme of the paper significantly in my mind
+from discovery potential to a confirmation/cross-check of an existing
+limit in a new channel. - “10 keV of deposited energy”: Does this
+refer to nuclear or electron recoil or both? Unclear since we are now
+dealing with inelastic scattering that produces a gamma too here.}}
+\end{itemize}
+
+\textcolor{red}{ We do explicitly say that this search is not competitive, but complementary, maybe express that better?}
+Classical searches for spin dependent elastic scattering have, and will keep to have a 
+higher sensitivity with respect to this search for spin dependent inelastic scattering.
+However, in case dark matter would be found, this type of search ensures you that the type 
+{\color{red} of interaction is spin-dependent, while for classical elastic scattering is much more difficult to tell.}
+
+
+\begin{itemize}
+	\item{ \em{
+Section III: Is there a reason the complete 477 live-days cannot be
+used for this paper? Wouldn’t this make your constraints even
+stronger? Please explain reason}}
+\end{itemize}
+
+Yes, the limit would be stronger. However the scope of this paper is 
+not to discover dark matter, for which one would use instead SD elastic
+scattering channel, but rather explore a different analysis channel.
+Doing a combination on three different science runs (each of them having 
+different background conditions and acceptances) is very demandig. 
+
+
+\begin{itemize}
+	\item \em{
+III.B: How were the ROI limits chosen? Text doesn’t say: should
+explain, are these +/- some number of sigma relative to the expected
+means of the NR and ER in cS1 and cS2 space?}
+\end{itemize}
+
+{\color{red} The signal distribution changes according to wimp mass due to the NR component,
+we choose the ROI so that it will embrace all the wimp hipothesys at least two 
+sigma. Now added to the text.}
+
+
+\begin{itemize}
+	\item \em{
+While I understand the sub-regions were chosen to have roughly equal
+number of events, it is not very clear to me at all why there are so
+many different ones, and why there seems to be no rhyme or reason to
+their sizes/shapes. It is also unclear, especially since Figure 1a is
+an example of only one mass (100 GeV WIMP) how these regions were
+picked to be optimal for any WIMP mass studied, doesn’t seem to be
+possible to me. (Lastly, why didn’t you just take equal slices in S1
+and S2 and make squares for example?)}
+\end{itemize}
+
+It was shown ({\color{red} see figure} ) a non appreciable
+difference in sensitivity dividing the region in more than 10 equal sized bins. 
+So provided that bins have similar sizes their shape is irrelevant to the sensitivity.
+There is a limiting factor tough, we are using asymptotic formulae for distribution of the
+test statistic, these formulaes are valid in the assumption of Wilks theorem, so that the number
+of events in each bin should "large". In order to not have bins with drammaticly low background, which
+happens in case of equally sized bins, we opted for collapsing bins achieving similar background content. 
+This reasults in a somewhat arbitrary choise for some region of the ROI, but it does not impact our sensitivity.
+
+
+\begin{itemize}
+	\item \em{
+Multiple-scatter cut: While I understand the cut on a second largest
+peak, what happens when the peaks from multiple scatters are merged
+because they are too close together? Also, the language is slightly
+unclear: does “regardless of S2 signal size” mean the primary S2 peak,
+or all peaks added together in a given event, counting them all as
+“the signal”?}
+\end{itemize}
+
+{\color{red} When multiple scatters are closer than few mm the they will be mearged. don't know. } 
+
+\begin{itemize}
+	\item \em{
+Figure 2 caption slightly unclear: I assume the figures include both
+the ER and the NR associated with the inelastic scatter, and not just
+the former as the text implies. Please correct, to better match up
+with explanation below in Section C.}
+\end{itemize}
+
+{\color{red} Yes, indeed. Text has been edited. } 
+
+\begin{itemize}
+	\item \em{
+Equation 2: It is not clear where S1 photon detection efficiency gets
+folded in here: currently this equation appears to yield photons not
+PE (Ly?) Am I reading it incorrectly?}
+\end{itemize}
+
+{\color{red} need to check. I forgot.}
+
+
+\begin{itemize}
+	\item \em{
+~0.80 +/- 0.05: Given the importance of knowing the final signal
+acceptance fraction I don’t understand why this has a “~,” especially
+since error bars are provided. Why is this still approximate? It
+should not be, unless you meant it changes with WIMP mass, and in that
+case a range should be provided, from the min to max masses you
+considered.}
+\end{itemize}
+
+What we meant is that is approximately constant with the wimp mass.
+Values being compatible within uncertainties with 0.80 +- 0.05.
+
+
+
+\begin{itemize}
+	\item \em{
+Section D: seems odd, doesn’t seem to add much beyond C and Figure 2.
+If there is no new information here, please remove it, or at reduce
+the length of the paragraph to include only those, and merge with C.
+Weird to have a section be one short paragraph by itself.}
+\end{itemize}
+
+
+
+
+\begin{itemize}
+	\item \em{
+E: It is not clear to me how 60Co and 232Th calibrations can tell you
+the BG in the signal region, given they have different energy
+spectra/distributions than BG? Isn’t it better to validate the
+simulation for 60Co and 232Th then simulate using NEST for example
+events of the same energy distribution as your actual ER BG? In fact,
+the BG simulation here seems to contradict the signal simulation in
+the earlier section. Why the dichotomy in methods, especially since
+the 39.6 keV line was actually present in calibration data, and so
+this all seems backwards to me. This could explain your unresolved
+systematic in F. you write is outside statistical fluctuation
+expectation. (You should have a BG prior from counting the parts of
+XENON100 and simulating in Geant4, yes?)}
+\end{itemize}
+
+The suggested approach relies on ..., there is no such a proven MC-data
+matching for XENON100, meaning we don't have a Geant4 of all radioactive material 
+background that produces a spectra that we can fully trust... We opted instead
+for a simpler approach, bla bla bla....
+
+
+\begin{itemize}
+	\item \em{
+Figure 3: statistical and systematic uncertainties should be denoted
+separately as is more standard practice, either splitting them off or
+using color coded error bars, as you do later}
+\end{itemize}
+
+
+
+\begin{itemize}
+	\item \em{Pseudo-samples: I am confused as to why these are necessary, doesn’t
+the ROOT PLR function allow profiling out over multiple such
+systematic uncertainties simultaneously and continuously, and not just
+in discrete +/-1-sigma steps? You also should explain whether
+parameters are all railed to their plus/minus 1-sigma’s all together
+or separately? This could be over-conservative, or swing the other
+way, depending on the correlations on these parameters, which I know
+for a fact myself can be very tricky: for example, raising a light
+yield can be canceled out by lowering light collection efficiency,
+each within its respective uncertainties, and not necessarily in
+integer multiples of their standard deviations of course. This sounds
+to me like what would be done in an “enhanced” cut-and-count-style
+analysis, but not in a PLR. Perhaps it is because you did binned and I
+am used to using PLR continuous (unbinned)? Can you please clarify,
+and justify your choice of binned versus unbinned? This goes back to
+my original question about the 9 strange sub-regions: How, a priori,
+were they selected, optimized, and validated? How does one choose
+one’s bins? Was it blind? Speaking of which, it should be made clear
+what was blind or not in the text. I imagine not much since you are
+primarily an NR-search experiment and this has ER Bottom of p. 6: How
+can all parameters related to systematics be justified as normal, as
+opposed to Poisson or skewed-normal in at least some cases? What I
+mean is, for example a low-energy NR with a very low expected number
+of photons detected is not going to have a symmetric distribution,
+since there is no such thing as a negative number of photons. Does not
+apply to higher energies, but I thought you have low O(10 keV) from
+the NR here too Figure 4: minor comment, but sentences just a bit out
+of order. Last sentence should move earlier because it refers to
+discussion about the top half of the figure.}
+\end{itemize}
+
+{color{red} not really sure what's the issue here, several issues in one question....}
+The analysis was not technically blind, since this data region was explored in several 
+other studies. The procedure we used was as if it was blind, since we didn't tune cuts on data.
+
+
+\begin{itemize}
+	\item \em{Section IV: Please briefly define in text the difference between CL(s)
+and the more common CL, and add a sentence explaining the benefit of
+CL(s), or at least a brief reason why it was used instead of CL. Not
+all readers may be familiar with Read’s work.}
+\end{itemize}
+
+
+
+
+\begin{itemize}
+	\item \em{
+Figure 5: Was the result constrained, due to large BG
+under-fluctuation, to be at -1-sigma-level, as it appears to be in
+this figure? If so, this should be stated in the figure caption and/or
+text and explained. Also, based on flat regions I see in the 1- and
+2-sigma bands in the plot it appears as though the limit was smoothed,
+but the bands were not. Both should be left as raw data points, or
+both smoothed, please choose, but be consistent (personally I prefer
+smooth, but a definite case can be made for discrete connected by
+straight lines in log-log in between the individual mass points you
+actually run in your PLR; past XENON and LUX and other results vary in
+choice of what to do in a case like this). This discrepancy is most
+noticeable between 100 and 200 GeV, where the blue bands are extremely
+straight, while the limit is curved. Lastly, are there really no other
+results to put on this plot? Not even an earlier XENON one? This is
+very surprising, but it does underscore the significance of your work
+here, as being in nearly virgin territory, and you can say that.}
+\end{itemize}
+
+\end{document}
+
