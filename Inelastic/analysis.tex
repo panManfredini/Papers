@@ -25,7 +25,12 @@ The inelastic scattering of a WIMP with a $^{129}$Xe nucleus is expected to prod
 a 39.6\,keV de-excitation photon. The largest fraction of the energy released in the event is via the ER, due to the emitted photon which loses its energy in the LXe.
 This represents an unusual signature compared to the one expected from an elastic scatter, and makes the signal region to overlap the ER background region.
 The region of interest (ROI) selected for this analysis surrounds the 39.6\,keV xenon line in the (cS1,cS2)-plane 
-and is based on $^{241}$AmBe calibration data, where such inelastic scatters are induced by fast neutrons. The ROI extends from 60 to 210\,PE in cS1, from 4$\times \, 10^3$ to 16$\times \, 10^3$\,PE in cS2 and is further divided  into sub-regions as shown in Figure~\ref{fig:SR}.  These sub-regions were defined to  contain a (roughly) similar number of expected background events in each region. The control regions (denoted as CR1 and CR2 in the figures), are selected to be as close as possible to the ROI,  and are used for cross checks of the background shape distribution.
+and is based on $^{241}$AmBe calibration data, where such inelastic scatters are induced by fast neutrons. The ROI extends from 60 to 210\,PE in cS1, from 4$\times \, 10^3$ to 16$\times \, 10^3$\,PE in cS2,
+{\ale such that to have at least 95\% acceptance to all signal mass hypothes. The ROI }
+%this
+is further divided  into sub-regions as shown in Figure~\ref{fig:SR}.  These sub-regions were defined to  contain a (roughly) similar number of expected background events in each region, 
+{\ale it was crosschecked that changing binning choice does not impact the sensitivity.} 
+The control regions (denoted as CR1 and CR2 in the figures), are selected to be as close as possible to the ROI,  and are used for cross checks of the background shape distribution.
 
 Apart from the condition to occur in the defined ROI, valid events are required to fulfil several selection criteria, 
 which can be summarized as follows: basic data quality cuts, energy selection and S2 threshold cut, veto cut for events with energy release in the detector's 
@@ -44,7 +49,7 @@ second largest S2 peak. For this analysis, the threshold has been optimized to 1
 %	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/mc_ambe_comp_slice1.png}} \\
 %	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/mc_ambe_comp_slice2.png}}
 %	\subfigure[]{\includegraphics[width=0.49\linewidth]{images/mc_ambe_comp_slice3.png}}
-	\caption{A simulation of the 39.6\,keV  xenon line activated from $^{241}$AmBe neutrons is compared with  data.
+	\caption{A full simulation {\ale (NR and ER response)} of the 39.6\,keV  xenon line activated from $^{241}$AmBe neutrons is compared with  data.
 		 Figure~(a) compares contours of equal density in the (cS1,cS2)-plane, while Figure~(b) shows the same distribution projected in cS1 for
 		 several ranges of cS2, the histograms are normalized to unit area. Light and dark blue represent simulation and data, respectively.
 		}
@@ -105,15 +110,20 @@ of $Q_{Y}(E_{nr})$ is taken from \cite{QY}. Finally, all detector related resolu
 The pdf of the ER and NR contributions are then convolved  to obtain the overall pdf of the expected signal.
 A 2D (cS1 versus cS2) acceptance map is applied to the signal pdf to reproduce data selection effects. Acceptances are computed separately for each selection 
 criteria using the $^{241}$AmBe calibration sample. Acceptances of other selections such as the liquid xenon veto cut, and the single-scatter interaction, represent an exception  for which  
-a dedicated computation has been performed. The combined acceptance  of all selection criteria in the region of interest averages to $\sim$$(0.80\pm0.05)$. 
+a dedicated computation has been performed. The combined acceptance  of all selection criteria in the region %of interest averages to $(0.80\pm0.05)$. 
+{\ale of interest is roughly constant for all masses and averages to $(0.80\pm0.05)$. }
 Figure~\ref{fig:SR}\,(a) shows an example of fully simulated signal model for a WIMP mass of 100\,GeV/c$^2$, normalized to 50 events. 
 
-\input{appendix} 
-%The signal simulation procedure has been validated by reproducing the 39.6\,keV xenon line from interactions due to neutrons from the 
-%$^{241}$AmBe source and compared to data. The simulated events were in agreement  with calibration data within statistical uncertainties. 
-%More detail on this validation campaign are reported in the appendix. 
-%%%%%% DEPENDS on the journal  %%%%%
-%{\textcolor{red} {Should we show an example, namely a figure from the signal model note?}}
+{\ale  
+The described signal simulation was validated reproducing the 39.6\,keV xenon line activated from $^{241}$AmBe neutrons and comparing it with data.
+For this purpose the NR energy spectrum expected from inelastic neutron-$^{129}$Xe scattering has been obtained via  Monte Carlo techniques, 
+where we take into account the  detector response and the non-uniform spatial distribution. The acceptance of analysis selections to this type of interaction 
+have been recomputed. In particular, the acceptance to the double scatter cut differs greatly between neutrons and WIMPs scattering. 
+Figure~\ref{fig:mc_comp} shows a comparisons between simulation (light blue) and calibration data (dark blue), contour lines of equal densities are compared in Figure~(a), 
+while Figure~(b) shows the cS1 projected distributions for different ranges in cS2. 
+}
+%see appendix for original version
+%\input{appendix} 
 
 
 

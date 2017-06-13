@@ -5,6 +5,7 @@
  
 \usepackage{color}
  
+\newcommand{\ale}{\color{red}}
 
 \begin{document}
 
@@ -17,14 +18,21 @@
 %\section{Introduction}
 %Here is the text of your introduction.
 
+We thank the referee for his/her's valuable comments, we really think these add a value to the paper. 
+You can find below the answer to the detailed questions, we implemented most of the suggestions in the new version of the paper.
+Below we report each  comment/question in blue and its related answer in black, we specifically state what modifications
+were applied to the paper in each single answer.
+
 
 \begin{itemize}
-	\item {\em{General: are these new SD limits isospin independent, applying to both protons and neutrons, unlike the traditional elastic SD for dark matter? If so, should be indicated right off the bat in the abstract.}}
+	\item {\color{blue} General: are these new SD limits isospin independent, applying to both protons and neutrons, unlike the traditional elastic SD for dark matter? If so, should be indicated right off the bat in the abstract.}
 \end{itemize}
 
+Looking at the paper "Signatures of Dark Matter Scattering Inelastically Off Nuclei" seems like he is right,
+and the interaction is isospin independent. {\color{red} please confirm.}, shall we change the abstract then?
 
 \begin{itemize}
-	\item{ \em{Introduction, third paragraph: Can you add a sentence further
+	\item {\color{blue} Introduction, third paragraph: Can you add a sentence further
 elucidating how it is possible for dark matter, of the masses and
 cross-sections you probe in this paper, to fail to be detected through
 elastic scattering, given current existing world-best limits from
@@ -36,21 +44,23 @@ a limit. This changes the theme of the paper significantly in my mind
 from discovery potential to a confirmation/cross-check of an existing
 limit in a new channel. - “10 keV of deposited energy”: Does this
 refer to nuclear or electron recoil or both? Unclear since we are now
-dealing with inelastic scattering that produces a gamma too here.}}
+dealing with inelastic scattering that produces a gamma too here.}
 \end{itemize}
 
-\textcolor{red}{ We do explicitly say that this search is not competitive, but complementary, maybe express that better?}
-Classical searches for spin dependent elastic scattering have, and will keep to have a 
-higher sensitivity with respect to this search for spin dependent inelastic scattering.
-However, in case dark matter would be found, this type of search ensures you that the type 
-{\color{red} of interaction is spin-dependent, while for classical elastic scattering is much more difficult to tell.}
-
+Classical searches for spin dependent elastic scattering have higher sensitivity with respect to this search for spin 
+dependent inelastic scattering. However, in case dark matter would be found, this type of search ensures you that the type 
+of interaction is spin-dependent, while for classical elastic scattering is much more difficult to tell.
+In the text we say that this search is complementary to the standard SD. {\color{red} We modified the text to "It was found that this channel,  although not competitive in terms of sensitivity,  
+is complementary to the spin-dependent, elastic scattering one".} 
+The "10 KeV" of deposited energy referes to both, if one looks at integrated rated above 10KeV NR for elastic scattering 
+finds that is smaller than the integrated rate of  NR+ER for inelastic scattering.
+{\color{red} We think that deposited energy is the correct wording here, since indeed it differs for the two cases.}
 
 \begin{itemize}
-	\item{ \em{
+	\item {\color{blue} 
 Section III: Is there a reason the complete 477 live-days cannot be
 used for this paper? Wouldn’t this make your constraints even
-stronger? Please explain reason}}
+stronger? Please explain reason}
 \end{itemize}
 
 Yes, the limit would be stronger. However the scope of this paper is 
@@ -61,19 +71,19 @@ different background conditions and acceptances) is very demandig.
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 III.B: How were the ROI limits chosen? Text doesn’t say: should
 explain, are these +/- some number of sigma relative to the expected
 means of the NR and ER in cS1 and cS2 space?}
 \end{itemize}
 
-{\color{red} The signal distribution changes according to wimp mass due to the NR component,
-we choose the ROI so that it will embrace all the wimp hipothesys at least two 
-sigma. Now added to the text.}
+The signal distribution changes according to wimp mass due to the NR component,
+we choose the ROI so that it will embrace all the wimp hipothesys at least at two 
+sigma. Now added to the text.
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 While I understand the sub-regions were chosen to have roughly equal
 number of events, it is not very clear to me at all why there are so
 many different ones, and why there seems to be no rhyme or reason to
@@ -84,18 +94,35 @@ possible to me. (Lastly, why didn’t you just take equal slices in S1
 and S2 and make squares for example?)}
 \end{itemize}
 
-It was shown ({\color{red} see figure} ) a non appreciable
+\begin{figure}[t!]
+  \centerline{\includegraphics[width=0.7\linewidth]{inelastic_binning_check.png}}
+  \caption{ Sensitivity computed dividing the ROI in different numbers of equally sized bins. NOTE: this sensitivity curves where run in a test long ago before the final version, imost of nuissance parameter have different implementation or missing, so they are NOT directly comparable with the final one, altough similar.}
+  \label{fig:binning}
+\end{figure}
+
+If one follows an appropriate binning procedure, then the choice of bins is irrelevant, meaning that 
+the final result should not depend on binning. Furthermore we never said that this particular 
+choice is optimal for all masses.
+
+It was shown, see Figure~\ref{fig:binning}, a non appreciable
 difference in sensitivity dividing the region in more than 10 equal sized bins. 
-So provided that bins have similar sizes their shape is irrelevant to the sensitivity.
-There is a limiting factor tough, we are using asymptotic formulae for distribution of the
+So as soon as one divide the ROI in any number larger than 10 of equally sized bins would get the same result. So why not divide in 40 equally sized bins at this point?  
+There is a limiting factor: we are using asymptotic formulae for distribution of the
 test statistic, these formulaes are valid in the assumption of Wilks theorem, so that the number
-of events in each bin should "large". In order to not have bins with drammaticly low background, which
-happens in case of equally sized bins, we opted for collapsing bins achieving similar background content. 
-This reasults in a somewhat arbitrary choise for some region of the ROI, but it does not impact our sensitivity.
+of events in each bin should be "large". In order to not have bins with drammatically low background, which
+happens in case of equally sized bins, we needed to merge bins and we need to do it in a way to not disrupt sensitivity.
+So we started with a number of equally sized bins (roughly 20 if I remember corretly) and we grouped them achieving similar 
+background density,  in this way the discrimination power is conserved, meaning that the discrimination power will be equal or better than 
+the one using the same number of final bins (in this case 9) but produced in equal sizes.
+Within this prescription, which is very general, the chosed arrangement of bins and shapes is almost arbitrary and
+could have been done in many different ways, however it doesn't matter because following 
+this procedure whatever peculiar binning choice will not  impact  our 
+sensitivity, so we choosed the solution that was technically easier.
+We added to the text that "it has been crosschecked that changing bin choice does not impact sensitivity".
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 Multiple-scatter cut: While I understand the cut on a second largest
 peak, what happens when the peaks from multiple scatters are merged
 because they are too close together? Also, the language is slightly
@@ -104,32 +131,39 @@ or all peaks added together in a given event, counting them all as
 “the signal”?}
 \end{itemize}
 
-{\color{red} When multiple scatters are closer than few mm the they will be mearged. don't know. } 
+{\color{red} Our detector position resolution is of the order of few mm, multiple scatters S2 that are 
+closer than that will be merged. These in any case are not a problem, since this cut is meant 
+to reduce neutron background, in the standard elastic analysis this turns into a small
+uncertainty in neutron bkg model, but for the energies deposits of this analysis neutron bkg 
+is irrelevant, so we could have even dropped that cut. When we say S2 we mean the primary peak. } 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 Figure 2 caption slightly unclear: I assume the figures include both
 the ER and the NR associated with the inelastic scatter, and not just
 the former as the text implies. Please correct, to better match up
 with explanation below in Section C.}
 \end{itemize}
 
-{\color{red} Yes, indeed. Text has been edited. } 
+{\color{red} Changed to "a full simulation (NR and ER response) of the 39,6~KeV xenon line..." } 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 Equation 2: It is not clear where S1 photon detection efficiency gets
 folded in here: currently this equation appears to yield photons not
 PE (Ly?) Am I reading it incorrectly?}
 \end{itemize}
 
-{\color{red} need to check. I forgot.}
+Ly is the measured light yield in PE/$KeV_{ee}$, so it encapsulate all the position dependence
+and collection efficiencies, as maybe described in more detail in 
+(https://arxiv.org/abs/1207.3458). This notation is common to XENON papers, but it might not be 
+general.
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 ~0.80 +/- 0.05: Given the importance of knowing the final signal
-acceptance fraction I don’t understand why this has a “~,” especially
+acceptance fraction I don’t understand why this has a “$\simeq$,” especially
 since error bars are provided. Why is this still approximate? It
 should not be, unless you meant it changes with WIMP mass, and in that
 case a range should be provided, from the min to max masses you
@@ -138,11 +172,13 @@ considered.}
 
 What we meant is that is approximately constant with the wimp mass.
 Values being compatible within uncertainties with 0.80 +- 0.05.
+it has been changed to: "The combined acceptance  of all selection criteria in the region 
+of interest is roughly constant for all masses and averages to $(0.80\pm0.05)$."
 
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 Section D: seems odd, doesn’t seem to add much beyond C and Figure 2.
 If there is no new information here, please remove it, or at reduce
 the length of the paragraph to include only those, and merge with C.
@@ -150,10 +186,12 @@ Weird to have a section be one short paragraph by itself.}
 \end{itemize}
 
 
+Section D has been merged to section C.
+
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 E: It is not clear to me how 60Co and 232Th calibrations can tell you
 the BG in the signal region, given they have different energy
 spectra/distributions than BG? Isn’t it better to validate the
@@ -168,23 +206,32 @@ expectation. (You should have a BG prior from counting the parts of
 XENON100 and simulating in Geant4, yes?)}
 \end{itemize}
 
-The suggested approach relies on ..., there is no such a proven MC-data
-matching for XENON100, meaning we don't have a Geant4 of all radioactive material 
-background that produces a spectra that we can fully trust... We opted instead
-for a simpler approach, bla bla bla....
+
+It has been proven by several XENON analysis that indeed 60Co and 232Th are very good
+and representative candidate for ER background, since they reproduce quite well the compton
+scattering band. They have been used multiple times in several xenon analysis, see for 
+example (https://arxiv.org/abs/1207.3458, and https://arxiv.org/abs/1609.06154).
+A full simulation with NEST will not give smaller uncertainties due to intrinsic
+NEST uncertainties and due to the MC radiogenic material uncertainty. 
+Furthermore, there is no such a proven MC-data matching for XENON100 for these energies, 
+meaning we don't have a Geant4 of all radioactive material 
+background that produces a spectra that we can fully trust. So we opted for a simple 
+but effective approach. 
+Regarding the "dicotomy of threatment": we could't use AmBe data as signal model due to 
+the non negligible difference between WIMP and AmBe introduced by the NR.
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 Figure 3: statistical and systematic uncertainties should be denoted
 separately as is more standard practice, either splitting them off or
 using color coded error bars, as you do later}
 \end{itemize}
 
-
+Done.
 
 \begin{itemize}
-	\item \em{Pseudo-samples: I am confused as to why these are necessary, doesn’t
+	\item {\color{blue} Pseudo-samples: I am confused as to why these are necessary, doesn’t
 the ROOT PLR function allow profiling out over multiple such
 systematic uncertainties simultaneously and continuously, and not just
 in discrete +/-1-sigma steps? You also should explain whether
@@ -215,23 +262,43 @@ of order. Last sentence should move earlier because it refers to
 discussion about the top half of the figure.}
 \end{itemize}
 
-{color{red} not really sure what's the issue here, several issues in one question....}
-The analysis was not technically blind, since this data region was explored in several 
+This comment touches many topics and we try to reply in order in the following:
+\begin{enumerate}
+	\item Regarding Pseudo-samples, these are used to produce shape uncertainty, so histogram variation, of +/-1 sigma step. What typically one does with these "pseudo-samples" histograms  is to use them as seeds for interpolation techniques controlled by a nuissance parameter, as the referee is suggesting. Now we have several such shape uncertainties and we felt that this approach was overcomplicated. We opted for a conservative but simple approximation: we sum up in quadrature all the "positive" and "negative" variation for each bin separately, we then assign the maximal of the two as a symmetric Gaussian distributed uncertainty on the single bin.  In this way we avoid the complication of histogram shape interpolation of several nuissance parameter. Being the uncertainty on each bin independent from the other this allows for much more freedom and has overcoverage of the shape variations.
+	
+	\item The question on the regions is already answered above. 
+	
+	\item The analysis was not technically blind, since this data region was explored in several 
 other studies. The procedure we used was as if it was blind, since we didn't tune cuts on data.
+
+	\item All the systematic uncertainties come from auxiliary measurements, so real measurements either from our experiment or in the literature, some of them may not be expected to be gaussian distributed,
+for example Leff, but in these cases the parametrizzation chosen is the one commonly accepted.
+
+	\item The sentences Figure 4 have been swapped.
+\end{enumerate}
+
+
+
 
 
 \begin{itemize}
-	\item \em{Section IV: Please briefly define in text the difference between CL(s)
+	\item {\color{blue} Section IV: Please briefly define in text the difference between CL(s)
 and the more common CL, and add a sentence explaining the benefit of
 CL(s), or at least a brief reason why it was used instead of CL. Not
 all readers may be familiar with Read’s work.}
 \end{itemize}
 
+The CLs was common practice of XENON100, and common practice of many high energy experimets. 
+This is a technique that target the same problem as power constrain (but in a less silly way),
+it protects the limit by data underfluctiation so that is difficult to exclude
+cross section to which the experiment is not sensitive to, paying the price of a bit worst sensitivity.
+The sentence {\color{red}"The CL$_s$ technique helps protecting against exclusion of a cross section
+smaller than experimental sensitivity" has been added}. Not really sure I wan to add that. 
 
 
 
 \begin{itemize}
-	\item \em{
+	\item {\color{blue} 
 Figure 5: Was the result constrained, due to large BG
 under-fluctuation, to be at -1-sigma-level, as it appears to be in
 this figure? If so, this should be stated in the figure caption and/or
@@ -249,6 +316,15 @@ results to put on this plot? Not even an earlier XENON one? This is
 very surprising, but it does underscore the significance of your work
 here, as being in nearly virgin territory, and you can say that.}
 \end{itemize}
+
+No the limit is not constrained, CLs is used instead of a power constrained limit.
+It just a coincidence that it stops at -1 sigma.
+Yes the bands are not smoothened while the curve is, this is due to a silly ROOT 
+problem which is {\color{red} fixed now} in another way.
+There is no other result that we know of that explores exactly this process.
+
+
+
 
 \end{document}
 
