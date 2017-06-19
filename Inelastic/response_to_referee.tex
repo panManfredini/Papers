@@ -18,7 +18,7 @@
 %\section{Introduction}
 %Here is the text of your introduction.
 
-We thank the referee for his/her's valuable comments, we really think these add a value to the paper. 
+We thank the referee for the valuable comments, we sincerily think these added  value to the paper. 
 You can find below the answer to the detailed questions, we implemented most of the suggestions in the new version of the paper.
 Below we report each  comment/question in blue and its related answer in black, we specifically state what modifications
 were applied to the paper in each single answer.
@@ -50,11 +50,12 @@ dealing with inelastic scattering that produces a gamma too here.}
 Classical searches for spin dependent elastic scattering have higher sensitivity with respect to this search for spin 
 dependent inelastic scattering. However, in case dark matter would be found, this type of search ensures you that the type 
 of interaction is spin-dependent, while for classical elastic scattering is much more difficult to tell.
-In the text we say that this search is complementary to the standard SD. {\color{red} We modified the text to "It was found that this channel,  although not competitive in terms of sensitivity,  
-is complementary to the spin-dependent, elastic scattering one".} 
-The "10 KeV" of deposited energy referes to both, if one looks at integrated rated above 10KeV NR for elastic scattering 
-finds that is smaller than the integrated rate of  NR+ER for inelastic scattering.
-{\color{red} We think that deposited energy is the correct wording here, since indeed it differs for the two cases.}
+In the text we say that this search is complementary to the standard SD.  We modified the text to "It was found that this channel,  
+although not competitive in terms of sensitivity,  
+is complementary to the spin-dependent, elastic scattering one".
+The "10 KeV" of deposited energy refers to both, if one looks at integrated rated above 10KeV NR for elastic scattering 
+finds that is smaller than the integrated rate of  NR+ER for inelastic scattering, see Fig. 6 in (https://arxiv.org/abs/1309.0825).
+We think that deposited energy is the correct wording here, since indeed it differs for the two cases.
 
 \begin{itemize}
 	\item {\color{blue} 
@@ -63,11 +64,13 @@ used for this paper? Wouldn’t this make your constraints even
 stronger? Please explain reason}
 \end{itemize}
 
-Yes, the limit would be stronger. However the scope of this paper is 
-not to discover dark matter, for which one would use instead SD elastic
-scattering channel, but rather explore a different analysis channel.
+Yes, the limit could have been stronger, a naive expectation for sensitivity improvement with respect to the current is about 30\%.
+However the scope of this paper is to explore a different analysis channel.
 Doing a combination on three different science runs (each of them having 
-different background conditions and acceptances) is very demandig. 
+different background conditions and acceptances) is very demanding,
+this would have extended significantly the time scale for this analysis,
+which was not very well motivated at the time given the fact that we knew 
+Xenon1T data taking was starting soon.
 
 
 \begin{itemize}
@@ -78,7 +81,7 @@ means of the NR and ER in cS1 and cS2 space?}
 \end{itemize}
 
 The signal distribution changes according to wimp mass due to the NR component,
-we choose the ROI so that it will embrace all the wimp hipothesys at least at two 
+we choose the ROI so that it will embrace all the wimp hypothesis at least at two 
 sigma. Now added to the text.
 
 
@@ -96,7 +99,7 @@ and S2 and make squares for example?)}
 
 \begin{figure}[t!]
   \centerline{\includegraphics[width=0.7\linewidth]{inelastic_binning_check.png}}
-  \caption{ Sensitivity computed dividing the ROI in different numbers of equally sized bins. NOTE: this sensitivity curves where run in a test long ago before the final version, imost of nuissance parameter have different implementation or missing, so they are NOT directly comparable with the final one, altough similar.}
+  \caption{ Sensitivity computed dividing the ROI in different numbers of equally sized bins. NOTE: this sensitivity curves where run in a test long ago before the final version, most of nuisance parameter have different implementation or missing, so they are NOT directly comparable with the final one, although similar.}
   \label{fig:binning}
 \end{figure}
 
@@ -106,18 +109,22 @@ choice is optimal for all masses.
 
 It was shown, see Figure~\ref{fig:binning}, a non appreciable
 difference in sensitivity dividing the region in more than 10 equal sized bins. 
-So as soon as one divide the ROI in any number larger than 10 of equally sized bins would get the same result. So why not divide in 40 equally sized bins at this point?  
-There is a limiting factor: we are using asymptotic formulae for distribution of the
-test statistic, these formulaes are valid in the assumption of Wilks theorem, so that the number
-of events in each bin should be "large". In order to not have bins with drammatically low background, which
-happens in case of equally sized bins, we needed to merge bins and we need to do it in a way to not disrupt sensitivity.
-So we started with a number of equally sized bins (roughly 20 if I remember corretly) and we grouped them achieving similar 
-background density,  in this way the discrimination power is conserved, meaning that the discrimination power will be equal or better than 
-the one using the same number of final bins (in this case 9) but produced in equal sizes.
-Within this prescription, which is very general, the chosed arrangement of bins and shapes is almost arbitrary and
-could have been done in many different ways, however it doesn't matter because following 
-this procedure whatever peculiar binning choice will not  impact  our 
-sensitivity, so we choosed the solution that was technically easier.
+So as soon as one divide the ROI in any number larger than 10 of equally sized bins would get the same result. 
+%So why not divide in 40 equally sized bins at this point?  
+%There is a limiting factor: we are using asymptotic formulae for distribution of the
+%test statistic, these formulae are valid in the assumption of Wilks theorem, so that the number
+%of events in each bin should be "large". In order to not have bins with dramatically low background, which
+%happens in case of equally sized bins, we needed to merge bins and we need to do it in a way to not disrupt sensitivity.
+We choosed a rebinning strategy that depends on the background shape and is the same for all masses. The bin shapes are designed to have
+equal background density: this ensures high discrimination power while keeping a low number of bins and ensure that all bins are 
+well populated (assumption necessary for the used test statistic asymptotic formulae). 
+%So we started with a number of equally sized bins (roughly 20 if I remember correctly) and we grouped them achieving similar 
+%background density,  in this way the discrimination power is conserved, meaning that the discrimination power will be equal or better than 
+%the one using the same number of final bins (in this case 9) but produced in equal sizes.
+%Within this prescription, which is very general, the chosen arrangement of bins and shapes is almost arbitrary and
+%could have been done in many different ways, however it doesn't matter because following 
+%this procedure whatever peculiar binning choice will not  impact  our 
+%sensitivity, so we choose the solution that was technically easier.
 We added to the text that "it has been crosschecked that changing bin choice does not impact sensitivity".
 
 
@@ -131,11 +138,11 @@ or all peaks added together in a given event, counting them all as
 “the signal”?}
 \end{itemize}
 
-{\color{red} Our detector position resolution is of the order of few mm, multiple scatters S2 that are 
+Our detector position resolution is of the order of few mm, multiple scatters S2 that are 
 closer than that will be merged. These in any case are not a problem, since this cut is meant 
 to reduce neutron background, in the standard elastic analysis this turns into a small
-uncertainty in neutron bkg model, but for the energies deposits of this analysis neutron bkg 
-is irrelevant, so we could have even dropped that cut. When we say S2 we mean the primary peak. } 
+uncertainty in neutron background model, but for the energies deposits of this analysis neutron background 
+is irrelevant, so we could have even dropped that cut. When we say S2 we mean the primary peak. 
 
 \begin{itemize}
 	\item {\color{blue} 
@@ -145,7 +152,7 @@ the former as the text implies. Please correct, to better match up
 with explanation below in Section C.}
 \end{itemize}
 
-{\color{red} Changed to "a full simulation (NR and ER response) of the 39,6~KeV xenon line..." } 
+Changed to "a full simulation (NR and ER response) of the 39,6~KeV xenon line..." 
 
 \begin{itemize}
 	\item {\color{blue} 
@@ -154,8 +161,8 @@ folded in here: currently this equation appears to yield photons not
 PE (Ly?) Am I reading it incorrectly?}
 \end{itemize}
 
-Ly is the measured light yield in PE/$KeV_{ee}$, so it encapsulate all the position dependence
-and collection efficiencies, as maybe described in more detail in 
+Ly is the measured light yield in PE/$KeV_{ee}$, so it encapsulates all the position dependence
+and collection efficiencies, as described in more detail in 
 (https://arxiv.org/abs/1207.3458). This notation is common to XENON papers, but it might not be 
 general.
 
@@ -170,9 +177,7 @@ case a range should be provided, from the min to max masses you
 considered.}
 \end{itemize}
 
-What we meant is that is approximately constant with the wimp mass.
-Values being compatible within uncertainties with 0.80 +- 0.05.
-it has been changed to: "The combined acceptance  of all selection criteria in the region 
+Changed to: "The combined acceptance  of all selection criteria in the region 
 of interest is roughly constant for all masses and averages to $(0.80\pm0.05)$."
 
 
@@ -208,7 +213,7 @@ XENON100 and simulating in Geant4, yes?)}
 
 
 It has been proven by several XENON analysis that indeed 60Co and 232Th are very good
-and representative candidate for ER background, since they reproduce quite well the compton
+and representative candidate for ER background, since they reproduce quite well the Compton
 scattering band. They have been used multiple times in several xenon analysis, see for 
 example (https://arxiv.org/abs/1207.3458, and https://arxiv.org/abs/1609.06154).
 A full simulation with NEST will not give smaller uncertainties due to intrinsic
@@ -217,7 +222,7 @@ Furthermore, there is no such a proven MC-data matching for XENON100 for these e
 meaning we don't have a Geant4 of all radioactive material 
 background that produces a spectra that we can fully trust. So we opted for a simple 
 but effective approach. 
-Regarding the "dicotomy of threatment": we could't use AmBe data as signal model due to 
+Regarding the "dichotomy of treatment": we couldn't use AmBe data as signal model due to 
 the non negligible difference between WIMP and AmBe introduced by the NR.
 
 
@@ -228,7 +233,10 @@ separately as is more standard practice, either splitting them off or
 using color coded error bars, as you do later}
 \end{itemize}
 
-Done.
+Since we use a large MC sample the statistical uncertainty is negligible, the bin with largest uncertainty 
+has relative error of $<$1\%, this makes the stat uncertainty be smaller than the tickness of the line.
+So we removed the "statistical" uncertainty label as in here we want to underline the systematic uncertainties.
+
 
 \begin{itemize}
 	\item {\color{blue} Pseudo-samples: I am confused as to why these are necessary, doesn’t
@@ -264,15 +272,17 @@ discussion about the top half of the figure.}
 
 This comment touches many topics and we try to reply in order in the following:
 \begin{enumerate}
-	\item Regarding Pseudo-samples, these are used to produce shape uncertainty, so histogram variation, of +/-1 sigma step. What typically one does with these "pseudo-samples" histograms  is to use them as seeds for interpolation techniques controlled by a nuissance parameter, as the referee is suggesting. Now we have several such shape uncertainties and we felt that this approach was overcomplicated. We opted for a conservative but simple approximation: we sum up in quadrature all the "positive" and "negative" variation for each bin separately, we then assign the maximal of the two as a symmetric Gaussian distributed uncertainty on the single bin.  In this way we avoid the complication of histogram shape interpolation of several nuissance parameter. Being the uncertainty on each bin independent from the other this allows for much more freedom and has overcoverage of the shape variations.
+	\item Regarding Pseudo-samples, these are used to produce shape uncertainty, so histogram variation, of +/-1 sigma step. What typically one does with these "pseudo-samples" histograms  is to use them as seeds for interpolation techniques controlled by a nuisance parameter, as the referee is suggesting. Now we have several such shape uncertainties and we felt that this approach was over complicated. We opted for a conservative but simple approximation: we sum up in quadrature all the "positive" and "negative" variation for each bin separately, we then assign the maximal of the two as a symmetric Gaussian distributed uncertainty on the single bin.  In this way we avoid the complication of histogram shape interpolation of several nuisance parameter. Being the uncertainty on each bin independent from the other this allows for much more freedom and has over coverage of the shape variations.
 	
 	\item The question on the regions is already answered above. 
 	
-	\item The analysis was not technically blind, since this data region was explored in several 
-other studies. The procedure we used was as if it was blind, since we didn't tune cuts on data.
+	\item Since this data region was explored in several other studies, this analysis was not blind.
+		The procedure we used was as if it was blind, since we didn't tune cuts on data.
 
-	\item All the systematic uncertainties come from auxiliary measurements, so real measurements either from our experiment or in the literature, some of them may not be expected to be gaussian distributed,
-for example Leff, but in these cases the parametrizzation chosen is the one commonly accepted.
+	\item All the systematic uncertainties come from auxiliary measurements, either from our experiment or from the literature, so 
+		to the best of our knowledge their prior is indeed a Gaussian. 
+		However, some of them may not be expected to be Gaussianly distributed, for example Leff, but in these cases the chosen parameterization
+		is the one commonly accepted.
 
 	\item The sentences Figure 4 have been swapped.
 \end{enumerate}
@@ -288,12 +298,8 @@ CL(s), or at least a brief reason why it was used instead of CL. Not
 all readers may be familiar with Read’s work.}
 \end{itemize}
 
-The CLs was common practice of XENON100, and common practice of many high energy experimets. 
-This is a technique that target the same problem as power constrain (but in a less silly way),
-it protects the limit by data underfluctiation so that is difficult to exclude
-cross section to which the experiment is not sensitive to, paying the price of a bit worst sensitivity.
-The sentence {\color{red}"The CL$_s$ technique helps protecting against exclusion of a cross section
-smaller than experimental sensitivity" has been added}. Not really sure I wan to add that. 
+The sentence "The CL$_s$ technique helps protecting against exclusion 
+of a cross section smaller than experimental sensitivity" has been added.  
 
 
 
@@ -318,10 +324,11 @@ here, as being in nearly virgin territory, and you can say that.}
 \end{itemize}
 
 No the limit is not constrained, CLs is used instead of a power constrained limit.
-It just a coincidence that it stops at -1 sigma.
-Yes the bands are not smoothened while the curve is, this is due to a silly ROOT 
-problem which is {\color{red} fixed now} in another way.
-There is no other result that we know of that explores exactly this process.
+It is just a coincidence that it stops at -1 sigma.
+Yes the bands are not smoothened while the curve is, this is due to a ROOT 
+problem (smoothening of a filled area does not work well in ROOT) which we  
+fixed now. There is no other result that we know of that explores 
+exactly this process.
 
 
 
