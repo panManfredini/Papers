@@ -1,0 +1,310 @@
+%\RequirePackage{lineno}\linenumbers\newdimen\linenumbersep\linenumbersep=2pt
+\documentclass[prd,aps,twocolumn,superscriptaddress,showpacs,showkeys,amsmath,amssymb,floatfix]{revtex4}
+\usepackage[colorlinks=true,citecolor=blue,filecolor=blue,linkcolor=blue,urlcolor=blue,pdftex]{hyperref}
+
+\usepackage{xspace} 
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{booktabs,graphicx,mathrsfs,verbatim,amsmath,units,soul}
+\usepackage{xspace} 
+\usepackage{upgreek}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{tabularx}
+
+\sloppy
+
+% NUMBERS
+
+%% **********************
+%Intro
+%% **********************
+\newcommand{\ton}{t}
+% total mass LXe
+\newcommand{\nxenontotalmass}{$3.2$\;\ton\xspace}
+% target mass LXe
+\newcommand{\nxenontargetmass}{$2.00$\;\ton\xspace}
+% distance cathode to gate
+\newcommand{\ntpcdriftlength}{$97~\mathrm{cm}$\xspace}
+% diameter of TPC
+\newcommand{\ntpcdiameter}{$96~\mathrm{cm}$\xspace}
+% extraction field in V/cm
+% https://xe1t-wiki.lngs.infn.it/doku.php?id=xenon:xenon1t:julien:xenon1t_3d_field_simulation#s1-region_-_sr1
+%  ^ Warning: seems incorrect...
+\newcommand{\nextractionfield}{$\sim$4~kV/cm\xspace}
+\newcommand{\nmultiplicationfield}{$\sim$8~kV/cm\xspace}
+% X ER rejection at Y NR acceptance
+\newcommand{\nerrejectionpct}{99.7\%\xspace}
+\newcommand{\nnracceptance}{50\%\xspace}
+\newcommand{\nxenonnttargetmass}{5.9\;\ton\xspace}
+
+%% **********************
+% Detector Parameters 
+%% **********************
+% Liquid level tolerance
+\newcommand{\nliquidleveltolerance}{2\%~RMS\xspace}
+% Liquid level above gate
+\newcommand{\nliquidlevelabovegate}{$2.5~\mathrm{mm}$\xspace}
+% LXe temperature
+\newcommand{\nxenoninternaltemp}{$-96.0$\,$^\circ$C\xspace}
+% LXe temperature tolerance
+\newcommand{\nxenoninternaltemptolerance}{0.02\%~RMS\xspace}
+% GXe pressure
+\newcommand{\nxenonpressure}{1.94~bar\xspace}
+% GXe pressure tolerance
+\newcommand{\nxenonpressuretolerance}{0.01\%~RMS\xspace}
+% Largest S2 x-y map correction (in middle)
+\newcommand{\nlargeststwoxycorrection}{32\%\xspace}
+% Drift Fields 
+% https://xe1t-wiki.lngs.infn.it/doku.php?id=xenon:xenon1t:jingqiang:field:data_driven_3d_electric_field_map
+\newcommand{\driftfieldsrzero}{$120$~V/cm\xspace} %\;\pm\;8
+\newcommand{\driftfieldsrone}{$81$~V/cm\xspace} %\;\pm\;7
+\newcommand{\driftfielderror}{2.2~V/cm RMS\xspace} %\;\pm\;7
+
+%% **********************
+% Livetimes
+%% **********************
+\newcommand{\SRzero}{SR0\xspace}
+\newcommand{\SRone}{SR1\xspace}
+% Livetime-corrected SR0
+\newcommand{\nlivetimesrzero}{32.1~days\xspace}
+% Livetime-corrected SR1
+\newcommand{\nlivetimesrone}{246.7~days\xspace}
+% Livetime-corrected combined
+\newcommand{\nlivetimetotal}{278.8~days\xspace}
+% Start date of sciencerun0
+\newcommand{\nstartofsciencerunzero}{November~22,~2016\xspace}
+% End date of sciencerun1
+\newcommand{\nendofsciencerunone}{February~8,~2018\xspace}
+% Power outage of sciencerun1
+\newcommand{\npoweroutsciencerunone}{February~24,~2018\xspace}
+% SR0 DAQ livetime
+\newcommand{\ndaqlivetimesrzero}{†92.2\%\xspace}
+\newcommand{\ndaqdeadtimesrzero}{7.8\%\xspace}
+% SR1 DAQ livetime
+\newcommand{\ndaqlivetimesrone}{98.8\%\xspace}
+\newcommand{\ndaqdeadtimesrone}{1.2\%\xspace}
+% Date of run-ending earthquake
+\newcommand{\nearthquakedate}{January~18,~2017\xspace}
+% Date SR1 start
+\newcommand{\nsronestart}{February~2,~2017\xspace}
+% Magnitude of run-ending earthquake
+\newcommand{\nearthquakemagnitude}{5.7\xspace}
+% Total gain zero PMTs
+\newcommand{\nblindedpmts}{36\xspace}
+% Gain zero PMTs due to leaks
+\newcommand{\nleakypmts}{26\xspace}
+% Gain zero PMTs not due to leaks (should add up to total)
+\newcommand{\notherpmts}{6\xspace}
+% Days lost from muon veto cut
+\newcommand{\nlossmuon}{1.2\%\xspace}%{3.4~days\xspace}
+% Days lost from PMT flash cut
+\newcommand{\nlossflash}{0.2\%\xspace}%{0.6~days\xspace}
+% Days lost from S2 tail cut
+\newcommand{\nlosstails}{4.4\%\xspace}%{12.3~days\xspace}
+% Days of good Rn220 data
+\newcommand{\ndaysrn}{17.1 days\xspace}
+% Days of good AmBe data
+\newcommand{\ndaysambe}{30.0 days\xspace}
+% Days of good NG data
+\newcommand{\ndaysng}{1.9 days\xspace}
+
+%% **********************
+% Thresholds and acceptance
+%% **********************
+% S2 threshold above 200pe
+\newcommand{\nstwoaccoverthresh}{unity\xspace}
+% Mean SPE acceptance, 3% is the 1-sigma. RMS would be 9.2%
+\newcommand{\nmeanspeacceptance}{$(93\pm3)$\%\xspace}
+
+%% **********************
+% Fiducial and backgrounds
+%% **********************
+% Fiducial mass
+\newcommand{\ncoremassname}{0.65~\ton\xspace}
+\newcommand{\nonetonnemassname}{0.9~\ton\xspace}
+\newcommand{\nnominalfiducialmassname}{1.3~\ton\xspace}
+\newcommand{\nnominalfiducialmass}{$(1.30~\pm~0.01)$\;\ton\xspace}
+%\newcommand{\nfiducialmass}{$1.6$}
+% Combined exposure
+\newcommand{\nexposure}{1.0\;\ton$\times$yr\xspace}
+% Total NR background in fiducial mass
+\newcommand{\ntotalnrbackground}{$XX$}
+% Total ER background in fiducial mass
+\newcommand{\nwallbackground}{$XX$}
+% Kr85 level
+\newcommand{\nkrlevel}{$^\mathrm{nat}\mathrm{Kr}/\mathrm{Xe} = (0.66\pm0.11)~\mathrm{ppt}$}
+\newcommand{\krrate}{$(7.7\pm 1.3)$~events/$(\mathrm{\ton}\times\mathrm{yr}\times\kevee)$}
+
+\newcommand{\rnlevel}{$(12.6 \pm 0.8)~\mu\mathrm{Bq}/\mathrm{kg}$\xspace}
+
+\newcommand{\rnrate}{$(7.7\pm 1.8)$~events/$(\mathrm{\ton}\times\mathrm{yr}\times\kevee)$}
+
+%\newcommand{\nkrlevel}{$^{85}\mathrm{Kr}/^{nat}\mathrm{Kr} = (1.645 \substack{+0.413 \\ -0.276})\times 10^{-11}$}
+% Rn222 level
+\newcommand{\nrnlevel}{YY}
+%\newcommand{\nlowestbg}{${(63~\pm~2)}$~\dru\xspace}
+\newcommand{\nlowestbg}{$(82\substack{+5 \\ -3}\textrm{~(sys)}\pm3\textrm{~(stat)})$~\dru\xspace}
+
+\newcommand{\rntwo}{${}^{222}$Rn\xspace}
+\newcommand{\rnzero}{${}^{220}$Rn\xspace}
+\newcommand{\krbkg}{${}^{85}$Kr\xspace}
+\newcommand{\krm}{${}^{83\mathrm{m}}$Kr\xspace}
+\newcommand{\ambe}{${}^{241}$AmBe\xspace} 
+
+\newcommand{\cSone}{$\mathrm{cS1}$\xspace}
+\newcommand{\cStwo}{$\mathrm{cS2}$\xspace}
+\newcommand{\cStwob}{$\mathrm{cS2_b}$\xspace}
+\newcommand{\ucSone}{$\mathrm{S1}$\xspace}
+\newcommand{\ucStwo}{$\mathrm{S2}$\xspace}
+\newcommand{\Sone}{$\mathrm{S1}$\xspace}
+\newcommand{\Stwo}{$\mathrm{S2}$\xspace}
+\newcommand{\z}{Z\xspace}
+\newcommand{\radius}{R\xspace}
+\newcommand{\radiussquared}{R$^{2}$\xspace}
+
+\newcommand{\nmoststringentlimit}{$4.1\times10^{-47}$~cm$^2$\xspace}
+\newcommand{\nmoststingentmass}{30~\gevcsq}
+\newcommand{\nbestfitsigmasi}{$2.9\times10^{-48}$~cm$^2$\xspace}
+\newcommand{\nbestfitsigmasitwoh}{$4.7\times10^{-47}$~cm$^2$\xspace}
+
+\newcommand\figref[1]{Fig.~\ref{#1}}
+\newcommand\Figref[1]{Figure~\ref{#1}}
+\newcommand\tabref[1]{Table~\ref{#1}}
+\newcommand\figsref[2]{Figs.~\ref{#1}~and~\ref{#2}}
+\newcommand\Figsref[2]{Figures~\ref{#1}~and~\ref{#2}}
+
+\newcommand{\kevee}{\mathrm{keV_{ee}}}
+\newcommand{\kevnr}{\mathrm{keV_{nr}}}
+
+% Old abbreviations
+\newcommand{\AC}{AC\xspace}
+\newcommand{\FM}{fiducial mass\xspace}
+
+% old microscopic units
+%\newcommand{\dru}{($\mathrm{kg}\times\mathrm{day}\times\mathrm{keV})^{-1}$\xspace}
+% new macroscopic units
+\newcommand{\dru}{events/$(\mathrm{\ton}\times\mathrm{yr}\times\kevee)$}
+\newcommand{\gevcsq}{GeV/c${}^2$\xspace}
+\newcommand{\tevcsq}{TeV/c${}^2$\xspace}
+\newcommand{\searchregion}{cS$1\!\in\![3, 70]\;\mathrm{PE}$, cS$2_b\!\in\![50, 8000]\;\mathrm{PE}$~search region}
+% https://xe1t-wiki.lngs.infn.it/doku.php?id=greene:bbf_acceptances
+\newcommand{\searchregionkev}{[1.4,~10.6]~$\kevee$\xspace}
+\newcommand{\searchregionkevnr}{[4.9,~40.9]~$\kevnr$\xspace}
+
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{$\lceil$#1$\rfloor$}}}
+\newcommand{\num}[1]{#1}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\arxiv}[1]{\href{http://arxiv.org/abs/#1}{\texttt{arXiv:#1}}}
+
+\makeatletter
+\newcommand{\romenum}[1]{(\romannumeral #1)}
+\makeatother
+
+\newcommand{\Delete}[2][magenta]{\textcolor{#1}{\sout{#2}}}
+\newcommand{\Modify}[2][magenta]{\textcolor{#1}{\textrm{#2}}}
+
+\newcommand{\bern}{\affiliation{Albert Einstein Center for Fundamental Physics, University of Bern, 3012 Bern, Switzerland}}
+
+\newcommand{\bologna}{\affiliation{Department of Physics and Astronomy, University of Bologna and INFN-Bologna, 40126 Bologna, Italy}}
+
+\newcommand{\chicago}{\affiliation{Department of Physics \& Kavli Institute for Cosmological Physics, University of Chicago, Chicago, IL 60637, USA}}
+
+\newcommand{\coimbra}{\affiliation{LIBPhys, Department of Physics, University of Coimbra, 3004-516 Coimbra, Portugal}}
+
+\newcommand{\columbia}{\affiliation{Physics Department, Columbia University, New York, NY 10027, USA}}
+
+\newcommand{\lngs}{\affiliation{INFN-Laboratori Nazionali del Gran Sasso and Gran Sasso Science Institute, 67100 L'Aquila, Italy}}
+
+\newcommand{\mainz}{\affiliation{Institut f\"ur Physik \& Exzellenzcluster PRISMA, Johannes Gutenberg-Universit\"at Mainz, 55099 Mainz, Germany}}
+
+\newcommand{\heidelberg}{\affiliation{Max-Planck-Institut f\"ur Kernphysik, 69117 Heidelberg, Germany}}
+
+\newcommand{\munster}{\affiliation{Institut f\"ur Kernphysik, Westf\"alische Wilhelms-Universit\"at M\"unster, 48149 M\"unster, Germany}}
+
+\newcommand{\nikhef}{\affiliation{Nikhef and the University of Amsterdam, Science Park, 1098XG Amsterdam, Netherlands}}
+
+\newcommand{\nyuad}{\affiliation{New York University Abu Dhabi, Abu Dhabi, United Arab Emirates}}
+
+\newcommand{\purdue}{\affiliation{Department of Physics and Astronomy, Purdue University, West Lafayette, IN 47907, USA}}
+
+\newcommand{\rpi}{\affiliation{Department of Physics, Applied Physics and Astronomy, Rensselaer Polytechnic Institute, Troy, NY 12180, USA}}
+
+\newcommand{\rice}{\affiliation{Department of Physics and Astronomy, Rice University, Houston, TX 77005, USA}}
+
+\newcommand{\stockholm}{\affiliation{Oskar Klein Centre, Department of Physics, Stockholm University, AlbaNova, Stockholm SE-10691, Sweden}}
+
+\newcommand{\subatech}{\affiliation{SUBATECH, IMT Atlantique, CNRS/IN2P3, Universit\'e de Nantes, Nantes 44307, France}}
+
+\newcommand{\torino}{\affiliation{INFN-Torino and Osservatorio Astrofisico di Torino, 10125 Torino, Italy}}
+
+\newcommand{\ucla}{\affiliation{Physics \& Astronomy Department, University of California, Los Angeles, CA 90095, USA}}
+
+\newcommand{\ucsd}{\affiliation{Department of Physics, University of California, San Diego, CA 92093, USA}}
+
+\newcommand{\wis}{\affiliation{Department of Particle Physics and Astrophysics, Weizmann Institute of Science, Rehovot 7610001, Israel}}
+
+\newcommand{\zurich}{\affiliation{Physik-Institut, University of Zurich, 8057  Zurich, Switzerland}}
+
+\newcommand{\paris}{\affiliation{LPNHE, Universit\'{e} Pierre et Marie Curie, Universit\'{e} Paris Diderot, CNRS/IN2P3, Paris 75252, France}}
+
+\newcommand{\freiburg}{\affiliation{Physikalisches Institut, Universit\"at Freiburg, 79104 Freiburg, Germany}}
+
+
+
+\begin{document}
+
+% CHANGE TO TITLE
+
+\title{Background Modeling and Statistical Inference for WIMP Searches in XENON1T }
+
+\input{authors.tex}
+
+\date{\today} 
+
+\begin{abstract}
+
+\end{abstract}
+
+
+\pacs{
+    95.35.+d, %Dark matter
+    14.80.Ly, %Supersymmetric partners of known particles
+    29.40.-n,  %Radiation detectors
+    95.55.Vj
+}
+
+\keywords{Dark Matter, Direct Detection, Xenon, Data Analysis}
+
+\maketitle
+
+\section{Introduction}
+% @all
+
+\section{Detector Signal Response Model}
+% @Qing
+
+
+\input{Sections/DetectorSignalResponse.tex}
+
+\section{Background and Dark Matter Signal Model}
+
+\input{Sections/ERBackground.tex}
+
+\input{Sections/NRBackground.tex}
+
+\input{Sections/SurfaceBackground.tex}
+
+\input{Sections/ACBackground.tex}
+
+\input{Sections/WIMPSignalModel.tex}
+
+\input{Sections/Inference.tex}
+\subsection{Inference of XENON1T Data}
+\input{Sections/Likelihood.tex}
+ 
+
+
+
+\input{bibliography.tex}
+\end{document}
